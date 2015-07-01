@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+     <mvcSiteMapNode title="About" controller="Home" action="About"/>
+	 <mvcSiteMapNode title="Contact" controller="Home" action="Contact"/>
+	 <mvcSiteMapNode title="Raise Exception" controller="Home" action="RaiseException"/>
+	  <mvcSiteMapNode title="SignUp Example" controller="Home" action="SignUpExample"/>
+	  
+	  <mvcSiteMapNode title="Profile" clickable="false">
+		  <mvcSiteMapNode title="Change Password" controller="Home" action="ChangePassword" />
+		  <mvcSiteMapNode title="Separator" clickable="false" />
+		  <mvcSiteMapNode title="Sign Off" controller="Home" action="SignOff" />
+	  </mvcSiteMapNode>
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

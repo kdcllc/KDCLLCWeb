@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - KDCLLC ASP.NET MVC5 Template</title>
+    <!-- Styles -->
+    @Styles.Render(Links.Bundles.Styles.css)
+    @Styles.Render(Links.Bundles.Styles.chameleonBootstrap)
+
+    <!---Scripts -->
+    @Scripts.Render(Links.Bundles.Scripts.modernizr)
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("KDCLLC", MVC.Home.ActionNames.Index, MVC.Home.Name , new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+
+            <div class="collapse navbar-collapse">
+
+                @Html.MvcSiteMap().Menu(MVC.Shared.Views.DisplayTemplates.BootstrapMenuHelperModel)
+
+                <ul class="nav navbar-nav navbar-right">
+                    @Html.Partial("_LoginPartial")
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - King David Consulting LLC.</p>
+        </footer>
+    </div>
+
+    <!-- Jquery -->
+    @Scripts.Render(Links.Bundles.Scripts.jquery)
+    
+    <!-- Boostrap -->
+    @Scripts.Render(Links.Bundles.Scripts.bootstrap)
+
+    <!-- scripts -->
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    font-family: arial, sans-serif;
+}
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/*Correction to Bootstrap code*/
+.modal {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+.modal-dialog .modal-large {
+    width: 80%;
+    margin-left: -40%;
+}
+@media (max-width: 600px) {
+    .modal-dialog .modal-huge {
+        width: 580px;
+        margin-left: -290px;
+    }
+}
+
+
+/* for Page 404 error */
+ .center {text-align: center; margin-left: auto; margin-right: auto; margin-bottom: auto; margin-top: auto;}
+
+
+ /* Chameleon Forms */
+
+form {
+    max-width: 1000px;
+    min-width: 500px;
+}
+
+form dt {
+    clear: both;
+    width: 33%;
+    float: left;
+    text-align: right;
+    margin: 0.25em 0 0 0;
+}
+ 
+form dd {
+    float: left;
+    width: 66%;
+    margin: 0 0 0.5em 0.25em;
+    position: relative;
+}
+
+form dd ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+form dl dl {
+    border: 1px solid #000;
+    overflow: hidden;
+    padding: 0.5em;
+}
+
+form em.required {
+    color: red;
+}
+
+form .hint {
+    display: inline;
+    font-size: 0.9em;
+    color: #AAA;
+    padding-left: 1.0em;
+}
+
+.field-validation-error {
+    color: red;
+    display: block;
+    font-style: italic;
+}
+
+fieldset {
+    border: 0;
+    border-top: 1px solid #000;
+}
+
+legend {
+    border: 1px solid #000;
+}
+
+.information_message, .action_message {
+    margin: 2.0em 0;
+    padding: 1.5em 3em 1.5em 1.5em;
+    border-left: 0.5em solid #eee;
+}
+
+.information_message {
+    background-color: #f0f7fd;
+    border-color: #d0e3f0;
+}
+
+.action_message {
+  background-color: #fefbed;
+  border-color: #f1e7bc;
+}
+
+.information_message h3, .action_message h3 {
+    margin-top: 0;
+}
+
+.information_message *:last-child, .action_message *:last-child {
+  margin-bottom: 0;
+}
+
+.form_navigation {
+    text-align: right;
+    background: #EEE;
+    padding: 1.0em;
+}
