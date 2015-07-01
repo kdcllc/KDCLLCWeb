@@ -1,4 +1,4 @@
-# KDCLLCWeb
+# KDCLLC Web Project Template
 ASP.NET MVC, AngularJS, Idenity
 
 ### KDCLLC.Web project file modificaiton to include TypeScript Compiler 1.0
@@ -13,4 +13,4 @@ include the following script in all of the <PropertyGroup Condition=" '$(Configu
 <TypeScriptSourceMap>true</TypeScriptSourceMap>
 <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
 <TypeScriptOutFile>Scripts/app/app.js</TypeScriptOutFile>
-'''
+```
