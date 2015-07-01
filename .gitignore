@@ -4,4 +4,5 @@
 /*/obj/*
 *.Cache
 /packages/*
+/Logs/*
 !/packages/repositories.config
