@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - KDCLLC ASP.NET MVC5 Template</title>
     <!-- Styles -->
-    @Styles.Render(Links.Bundles.Styles.css)
-    @Styles.Render(Links.Bundles.Styles.chameleonBootstrap)
+    @Html.Partial(MVC.Shared.Views._StyleBundle)
 
     <!---Scripts -->
-    @Scripts.Render(Links.Bundles.Scripts.modernizr)
+    @Html.Partial(MVC.Shared.Views._HeaderScripts)
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -41,11 +40,12 @@
         </footer>
     </div>
 
+
     <!-- Jquery -->
-    @Scripts.Render(Links.Bundles.Scripts.jquery)
+    @Html.Partial(MVC.Shared.Views._JqueryScriptBundle)
     
     <!-- Boostrap -->
-    @Scripts.Render(Links.Bundles.Scripts.bootstrap)
+    @Html.Partial(MVC.Shared.Views._BoostrapScriptBundle)
 
     <!-- scripts -->
     @RenderSection("scripts", required: false)

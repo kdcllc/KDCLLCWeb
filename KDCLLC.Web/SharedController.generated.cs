@@ -37,12 +37,22 @@ namespace T4MVC
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string _BoostrapScriptBundle = "_BoostrapScriptBundle";
+                public readonly string _HeaderScripts = "_HeaderScripts";
+                public readonly string _JqueryScriptBundle = "_JqueryScriptBundle";
+                public readonly string _JqueryvalScriptBundle = "_JqueryvalScriptBundle";
                 public readonly string _Layout = "_Layout";
                 public readonly string _LoginPartial = "_LoginPartial";
+                public readonly string _StyleBundle = "_StyleBundle";
                 public readonly string Error = "Error";
             }
+            public readonly string _BoostrapScriptBundle = "~/Views/Shared/_BoostrapScriptBundle.cshtml";
+            public readonly string _HeaderScripts = "~/Views/Shared/_HeaderScripts.cshtml";
+            public readonly string _JqueryScriptBundle = "~/Views/Shared/_JqueryScriptBundle.cshtml";
+            public readonly string _JqueryvalScriptBundle = "~/Views/Shared/_JqueryvalScriptBundle.cshtml";
             public readonly string _Layout = "~/Views/Shared/_Layout.cshtml";
             public readonly string _LoginPartial = "~/Views/Shared/_LoginPartial.cshtml";
+            public readonly string _StyleBundle = "~/Views/Shared/_StyleBundle.cshtml";
             public readonly string Error = "~/Views/Shared/Error.cshtml";
             static readonly _DisplayTemplatesClass s_DisplayTemplates = new _DisplayTemplatesClass();
             public _DisplayTemplatesClass DisplayTemplates { get { return s_DisplayTemplates; } }

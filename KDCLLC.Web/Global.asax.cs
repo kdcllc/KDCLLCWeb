@@ -25,10 +25,7 @@ namespace KDCLLC.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            ScriptBundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            StyleBundleConfig.RegisterBundles(BundleTable.Bundles);
-
+            
             //allows for labels to be readable without the need to provide display mode
             HumanizedLabels.Register();
 

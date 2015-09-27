@@ -49,9 +49,7 @@
         @n.Submit("Signup")
     }
 }
+
 @section scripts{
-    <!-- Jquery Validation -->
-   @Scripts.Render("~/bundles/jqueryval")
-   <!-- Chameleon bootstrap -->
-   @Scripts.Render("~/bundles/chameleon-bootstrapjs")
-}
+ @Html.Partial(MVC.Shared.Views._JqueryvalScriptBundle)   
+ }

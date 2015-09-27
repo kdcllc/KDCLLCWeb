@@ -64,9 +64,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AspNet.Mvc.Grid.1.0.1\lib\NET45\AspNet.Mvc.Grid.dll</HintPath>
     </Reference>
-    <Reference Include="ChameleonForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\ChameleonForms.1.0.0.42\lib\NET40\ChameleonForms.dll</HintPath>
+    <Reference Include="ChameleonForms, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ChameleonForms.1.2.0.16\lib\NET40\ChameleonForms.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Common.Logging">
       <HintPath>..\packages\Common.Logging.3.0.0\lib\net40\Common.Logging.dll</HintPath>
@@ -243,13 +243,10 @@
     <Compile Include="AccountController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\ConfigureChameleonTwitterBootstrap.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RegisterChameleonFormsComponents.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\ScriptBundleConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
-    <Compile Include="App_Start\StyleBundleConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -281,119 +278,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\chameleonforms-twitterbootstrap.css" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\css\chameleonforms-twitterbootstrap.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="wwwroot\css\Site.css" />
     <Content Include="gulpfile.js" />
-    <Content Include="Icon.png" />
     <Content Include="Mvc.sitemap" />
     <Content Include="log4net.config" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Content Include="bower.json" />
-    <Content Include="Content\themes\default\bootstrap-tagsinput.less" />
-    <Content Include="Content\themes\default\bootstrap.less" />
-    <Content Include="Content\themes\default\variables.less" />
-    <Content Include="Content\bootstrap\typeahead.less" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap\wells.less" />
-    <Content Include="Content\bootstrap\variables.less" />
-    <Content Include="Content\bootstrap\utilities.less" />
-    <Content Include="Content\bootstrap\type.less" />
-    <Content Include="Content\bootstrap\tooltip.less" />
-    <Content Include="Content\bootstrap\thumbnails.less" />
-    <Content Include="Content\bootstrap\theme.less" />
-    <Content Include="Content\bootstrap\tables.less" />
-    <Content Include="Content\bootstrap\scaffolding.less" />
-    <Content Include="Content\bootstrap\responsive-utilities.less" />
-    <Content Include="Content\bootstrap\responsive-embed.less" />
-    <Content Include="Content\bootstrap\progress-bars.less" />
-    <Content Include="Content\bootstrap\print.less" />
-    <Content Include="Content\bootstrap\popovers.less" />
-    <Content Include="Content\bootstrap\panels.less" />
-    <Content Include="Content\bootstrap\pagination.less" />
-    <Content Include="Content\bootstrap\pager.less" />
-    <Content Include="Content\bootstrap\normalize.less" />
-    <Content Include="Content\bootstrap\navs.less" />
-    <Content Include="Content\bootstrap\navbar.less" />
-    <Content Include="Content\bootstrap\modals.less" />
-    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
-    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
-    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
-    <Content Include="Content\bootstrap\mixins\table-row.less" />
-    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
-    <Content Include="Content\bootstrap\mixins\size.less" />
-    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
-    <Content Include="Content\bootstrap\mixins\resize.less" />
-    <Content Include="Content\bootstrap\mixins\reset-text.less" />
-    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
-    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
-    <Content Include="Content\bootstrap\mixins\panels.less" />
-    <Content Include="Content\bootstrap\mixins\pagination.less" />
-    <Content Include="Content\bootstrap\mixins\opacity.less" />
-    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
-    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
-    <Content Include="Content\bootstrap\mixins\list-group.less" />
-    <Content Include="Content\bootstrap\mixins\labels.less" />
-    <Content Include="Content\bootstrap\mixins\image.less" />
-    <Content Include="Content\bootstrap\mixins\hide-text.less" />
-    <Content Include="Content\bootstrap\mixins\grid.less" />
-    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
-    <Content Include="Content\bootstrap\mixins\gradients.less" />
-    <Content Include="Content\bootstrap\mixins\forms.less" />
-    <Content Include="Content\bootstrap\mixins\clearfix.less" />
-    <Content Include="Content\bootstrap\mixins\center-block.less" />
-    <Content Include="Content\bootstrap\mixins\buttons.less" />
-    <Content Include="Content\bootstrap\mixins\border-radius.less" />
-    <Content Include="Content\bootstrap\mixins\background-variant.less" />
-    <Content Include="Content\bootstrap\mixins\alerts.less" />
-    <Content Include="Content\bootstrap\mixins.less" />
-    <Content Include="Content\bootstrap\media.less" />
-    <Content Include="Content\bootstrap\list-group.less" />
-    <Content Include="Content\bootstrap\labels.less" />
-    <Content Include="Content\bootstrap\jumbotron.less" />
-    <Content Include="Content\bootstrap\input-groups.less" />
-    <Content Include="Content\bootstrap\grid.less" />
-    <Content Include="Content\bootstrap\glyphicons.less" />
-    <Content Include="Content\bootstrap\forms.less" />
-    <Content Include="Content\bootstrap\dropdowns.less" />
-    <Content Include="Content\bootstrap\component-animations.less" />
-    <Content Include="Content\bootstrap\code.less" />
-    <Content Include="Content\bootstrap\close.less" />
-    <Content Include="Content\bootstrap\carousel.less" />
-    <Content Include="Content\bootstrap\buttons.less" />
-    <Content Include="Content\bootstrap\button-groups.less" />
-    <Content Include="Content\bootstrap\breadcrumbs.less" />
-    <Content Include="Content\bootstrap\bootstrap.less" />
-    <Content Include="Content\bootstrap\badges.less" />
-    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="wwwroot\css\bootstrap.less" />
+    <Content Include=".bowerrc" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
     <Content Include="package.json" />
-    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-2.1.3.js" />
-    <Content Include="Scripts\jquery-2.1.3.min.js" />
-    <Content Include="Scripts\jquery-2.1.3.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.chameleon.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.twitterbootstrap.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\npm.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.matchmedia.addListener.js" />
-    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="packages - Copy.config" />
+    <None Include="Properties\PublishProfiles\File.pubxml" />
     <None Include="T4MVC.tt.settings.xml" />
     <Content Include="Views\Home\Index.cshtml">
       <SubType>Code</SubType>
@@ -455,11 +359,95 @@
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="wwwroot\favicon.ico" />
+    <Content Include="wwwroot\js\jquery.validate.unobtrusive.chameleon.js" />
+    <Content Include="wwwroot\js\jquery.validate.unobtrusive.twitterbootstrap.js" />
+    <Content Include="wwwroot\web.config" />
+    <Content Include="wwwroot\css\bootstrap\alerts.less" />
+    <Content Include="wwwroot\css\bootstrap\badges.less" />
+    <Content Include="wwwroot\css\bootstrap\bootstrap-tagsinput.less" />
+    <Content Include="wwwroot\css\bootstrap\bootstrap.less" />
+    <Content Include="wwwroot\css\bootstrap\breadcrumbs.less" />
+    <Content Include="wwwroot\css\bootstrap\button-groups.less" />
+    <Content Include="wwwroot\css\bootstrap\buttons.less" />
+    <Content Include="wwwroot\css\bootstrap\carousel.less" />
+    <Content Include="wwwroot\css\bootstrap\close.less" />
+    <Content Include="wwwroot\css\bootstrap\code.less" />
+    <Content Include="wwwroot\css\bootstrap\component-animations.less" />
+    <Content Include="wwwroot\css\bootstrap\dropdowns.less" />
+    <Content Include="wwwroot\css\bootstrap\forms.less" />
+    <Content Include="wwwroot\css\bootstrap\glyphicons.less" />
+    <Content Include="wwwroot\css\bootstrap\grid.less" />
+    <Content Include="wwwroot\css\bootstrap\input-groups.less" />
+    <Content Include="wwwroot\css\bootstrap\jumbotron.less" />
+    <Content Include="wwwroot\css\bootstrap\labels.less" />
+    <Content Include="wwwroot\css\bootstrap\list-group.less" />
+    <Content Include="wwwroot\css\bootstrap\media.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\alerts.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\background-variant.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\border-radius.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\buttons.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\center-block.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\clearfix.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\forms.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\gradients.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\grid-framework.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\grid.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\hide-text.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\image.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\labels.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\list-group.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\nav-divider.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\opacity.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\pagination.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\panels.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\progress-bar.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\reset-filter.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\reset-text.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\resize.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\size.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\tab-focus.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\table-row.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\text-overflow.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="wwwroot\css\bootstrap\mixins.less" />
+    <Content Include="wwwroot\css\bootstrap\modals.less" />
+    <Content Include="wwwroot\css\bootstrap\navbar.less" />
+    <Content Include="wwwroot\css\bootstrap\navs.less" />
+    <Content Include="wwwroot\css\bootstrap\normalize.less" />
+    <Content Include="wwwroot\css\bootstrap\pager.less" />
+    <Content Include="wwwroot\css\bootstrap\pagination.less" />
+    <Content Include="wwwroot\css\bootstrap\panels.less" />
+    <Content Include="wwwroot\css\bootstrap\popovers.less" />
+    <Content Include="wwwroot\css\bootstrap\print.less" />
+    <Content Include="wwwroot\css\bootstrap\progress-bars.less" />
+    <Content Include="wwwroot\css\bootstrap\responsive-embed.less" />
+    <Content Include="wwwroot\css\bootstrap\responsive-utilities.less" />
+    <Content Include="wwwroot\css\bootstrap\scaffolding.less" />
+    <Content Include="wwwroot\css\bootstrap\tables.less" />
+    <Content Include="wwwroot\css\bootstrap\theme.less" />
+    <Content Include="wwwroot\css\bootstrap\thumbnails.less" />
+    <Content Include="wwwroot\css\bootstrap\tooltip.less" />
+    <Content Include="wwwroot\css\bootstrap\type.less" />
+    <Content Include="wwwroot\css\bootstrap\typeahead.less" />
+    <Content Include="wwwroot\css\bootstrap\utilities.less" />
+    <Content Include="wwwroot\css\bootstrap\variables.less" />
+    <Content Include="wwwroot\css\bootstrap\wells.less" />
+    <Content Include="Views\Shared\_StyleBundle.cshtml" />
+    <Content Include="Views\Shared\_JqueryScriptBundle.cshtml" />
+    <Content Include="Views\Shared\_BoostrapScriptBundle.cshtml" />
+    <Content Include="Views\Shared\_JqueryvalScriptBundle.cshtml" />
+    <Content Include="Views\Shared\_HeaderScripts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\app\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\lib\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -526,4 +514,9 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
+  <Target Name="Mytarget" AfterTargets="CopyAllFilesToSingleFolderForPackage">
+    <Exec Command="gulp" />
+  </Target>
+  <Target Name="AfterPublish">
+  </Target>
 </Project>

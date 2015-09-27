@@ -1,10 +1,20 @@
 {
-  "name": "KDCLLCWeb",
-  "private": true,
+    "name": "KDCLLCWeb",
+    "version": "0.0.0",
+    "authors": ["info info@kingdavidconsulting.com"],
+    "private": true,
+     "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "bootstrap":  "*",
+    "bootstrap": "*",
+
     "jquery-validation-unobtrusive": "*",
-    "modernizr": "*",
+    "modernizr": "~2.8.3",
     "respond": "*"
   }
 }
