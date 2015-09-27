@@ -94,7 +94,7 @@
   <ItemGroup>
     <Compile Include="Filters\MvcHandleErrorAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Security\Attributes\ConaMvcAuthorize.cs" />
+    <Compile Include="Security\Attributes\KdcMvcAuthorize.cs" />
     <Compile Include="SiteMaps\DbSiteMapNode.cs" />
   </ItemGroup>
   <ItemGroup>
