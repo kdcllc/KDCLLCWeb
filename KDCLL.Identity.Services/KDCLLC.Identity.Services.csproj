@@ -267,6 +267,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="bin\KDCLLC.Web.Services.dll"><Visible>false</Visible></Content>
+    <Content Include="bin\KDCLLC.Web.Services.pdb"><Visible>false</Visible></Content>
+
     <Content Include="Lib\SharpVoice.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

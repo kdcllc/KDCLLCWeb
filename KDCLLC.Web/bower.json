@@ -15,6 +15,7 @@
 
     "jquery-validation-unobtrusive": "*",
     "modernizr": "~2.8.3",
-    "respond": "*"
+    "respond": "*",
+    "bootstrap-tagsinput": "*"
   }
 }

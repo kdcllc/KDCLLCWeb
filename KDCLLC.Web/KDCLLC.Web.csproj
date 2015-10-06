@@ -296,7 +296,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="package.json" />
-    <Content Include="packages - Copy.config" />
+    <Content Include="packages-old.config" />
     <None Include="Properties\PublishProfiles\File.pubxml" />
     <None Include="T4MVC.tt.settings.xml" />
     <Content Include="Views\Home\Index.cshtml">
@@ -454,7 +454,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KDCLL.Identity.Services\KDCLLC.Identity.Services.csproj">
-      <Project>{0A6829F5-106D-44FF-A1D6-E04B320F127B}</Project>
+      <Project>{0a6829f5-106d-44ff-a1d6-e04b320f127b}</Project>
       <Name>KDCLLC.Identity.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\KDCLLC.Web.Core\KDCLLC.Web.Core.csproj">
