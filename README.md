@@ -21,12 +21,5 @@ include the following script in all of the <PropertyGroup Condition=" '$(Configu
 ### Visual Studio.NET 2013 and 2015 Extensions:
 
 
-### Global Node.js packages to be installed:
-
-- ```
- - npm install -g bower 
-``` 
-- ```sh
- - npm install -g grunt-cli 
-```
-- ``` - npm install -g gulp ```
+### Getting Started-Wiki:
+[Wiki](https://github.com/kdcllc/KDCLLCWeb/wiki)
