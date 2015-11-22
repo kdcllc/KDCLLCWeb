@@ -22,3 +22,5 @@ pkg
 packages/*
 !packages/repositories.config
 node_modules
+
+log
