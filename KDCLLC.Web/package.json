@@ -5,6 +5,7 @@
   "devDependencies": {
      "bower": "1.4.1",
     "grunt-contrib-less": "^1.0.0",
+    "path": "^0.12.7",
     "less": "^2.1.2",
     "del" : "2.0.2",
     "gulp": "^3.9.0",

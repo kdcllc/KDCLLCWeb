@@ -279,9 +279,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="wwwroot\css\chameleonforms-twitterbootstrap.css" />
     <Content Include="Global.asax" />
     <Content Include="wwwroot\css\Site.css" />
@@ -292,6 +289,10 @@
     <Content Include="bower.json" />
     <Content Include="wwwroot\css\bootstrap.less" />
     <Content Include=".bowerrc" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -491,7 +492,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49927</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49927/</IISUrl>
+          <IISUrl>http://localhost:8080/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -514,9 +515,10 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
-  <Target Name="Mytarget" AfterTargets="CopyAllFilesToSingleFolderForPackage">
+  <!-- Gulp Execution-->
+  <!--<Target Name="Mytarget" AfterTargets="CopyAllFilesToSingleFolderForPackage">
     <Exec Command="gulp" />
-  </Target>
+  </Target>-->
   <Target Name="AfterPublish">
   </Target>
 </Project>

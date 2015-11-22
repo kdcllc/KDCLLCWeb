@@ -1,10 +1,7 @@
-﻿using System;
-using KDCLLC.Web.Data;
-using Xunit;
+﻿using Xunit;
 using Faker;
 using KDCLLC.Web.Models.Data;
 using KDCLLC.Web.Data;
-using System.Collections.Generic;
 using Shouldly;
 
 namespace KDCLLC.Web.Tests.DataContextTest
