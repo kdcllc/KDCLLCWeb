@@ -9,3 +9,7 @@ Custom template project for the enterprise usage.
 
 ### Getting Started-Wiki:
 [Wiki](https://github.com/kdcllc/KDCLLCWeb/wiki)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kdcllc/kdcllcweb/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
