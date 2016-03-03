@@ -11,6 +11,8 @@ namespace KDCLLC.Web.Data
     public class DataContext : DbContext
     {
         public DataContext() : base("DataContext") { }
+        public DbSet<SalesOrder> SalesOrders { get; set; }
+        public DbSet<SalesOrderItem> SalesOrderItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

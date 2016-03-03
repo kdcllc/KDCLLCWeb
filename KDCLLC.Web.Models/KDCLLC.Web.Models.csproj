@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="Data\BaseEntity.cs" />
     <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\IObjectWithState.cs" />
+    <Compile Include="Data\SalesOrder.cs" />
+    <Compile Include="Data\SalesOrderItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\SignupViewModel.cs" />
   </ItemGroup>
