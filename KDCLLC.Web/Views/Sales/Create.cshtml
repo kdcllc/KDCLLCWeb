@@ -1,0 +1,24 @@
+﻿@model KDCLLC.Web.ViewModels.SalesOrderViewModel
+@using System.Web.Script.Serialization
+
+@{
+    ViewBag.Title = "Create a Sales Order";
+}
+
+@{ string data = new JavaScriptSerializer().Serialize(Model);}
+
+@section scripts{
+    <script src="~/wwwroot/lib/knockoutjs/dist/knockout.js"></script>
+    <script src="~/wwwroot/lib/knockout.mapping/build/output/knockout.mapping-latest.js"></script>
+        
+    <script src="~/wwwroot/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/wwwroot/lib/jquery-validation-bootstrap-tooltip/jquery-validate.bootstrap-tooltip.js"></script>
+
+    <script src="~/wwwroot/js/salesorderviewmodel.js"></script>
+    <script type="text/javascript">
+        var salesOrderViewModel = new SalesOrderViewModel(@Html.Raw(data));
+        ko.applyBindings(salesOrderViewModel);
+    </script>
+}
+
+@Html.Partial(MVC.Shared.Views.Sales._EditSalesOrder)

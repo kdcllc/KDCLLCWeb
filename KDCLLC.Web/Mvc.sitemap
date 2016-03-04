@@ -8,7 +8,7 @@
 	 <mvcSiteMapNode title="Contact" controller="Home" action="Contact"/>
 	 <mvcSiteMapNode title="Raise Exception" controller="Home" action="RaiseException"/>
 	  <mvcSiteMapNode title="SignUp Example" controller="Home" action="SignUpExample"/>
-	  
+    <mvcSiteMapNode title="Knockout" controller="Sales" action="Index"/>
 	  <mvcSiteMapNode title="Profile" clickable="false">
 		  <mvcSiteMapNode title="Change Password" controller="Home" action="ChangePassword" />
 		  <mvcSiteMapNode title="Separator" clickable="false" />

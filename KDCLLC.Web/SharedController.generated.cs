@@ -77,6 +77,21 @@ namespace T4MVC
                 public readonly string SiteMapTitleHelperModel = "SiteMapTitleHelperModel";
                 public readonly string SiteMapTitleHelperModel_cshtml = "SiteMapTitleHelperModel";
             }
+            static readonly _SalesClass s_Sales = new _SalesClass();
+            public _SalesClass Sales { get { return s_Sales; } }
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public partial class _SalesClass
+            {
+                static readonly _ViewNamesClass s_ViewNames = new _ViewNamesClass();
+                public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
+                public class _ViewNamesClass
+                {
+                    public readonly string _DisplaySalesOrder = "_DisplaySalesOrder";
+                    public readonly string _EditSalesOrder = "_EditSalesOrder";
+                }
+                public readonly string _DisplaySalesOrder = "~/Views/Shared/Sales/_DisplaySalesOrder.cshtml";
+                public readonly string _EditSalesOrder = "~/Views/Shared/Sales/_EditSalesOrder.cshtml";
+            }
         }
     }
 

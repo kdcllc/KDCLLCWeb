@@ -29,6 +29,7 @@ public static partial class MVC
     public static KDCLLC.Web.Controllers.AccountController Account = new KDCLLC.Web.Controllers.T4MVC_AccountController();
     public static KDCLLC.Web.Controllers.ErrorController Error = new KDCLLC.Web.Controllers.T4MVC_ErrorController();
     public static KDCLLC.Web.Controllers.HomeController Home = new KDCLLC.Web.Controllers.T4MVC_HomeController();
+    public static KDCLLC.Web.Controllers.SalesController Sales = new KDCLLC.Web.Controllers.T4MVC_SalesController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 
@@ -61,41 +62,24 @@ internal partial class T4MVC_System_Web_Mvc_ActionResult : System.Web.Mvc.Action
     public string Protocol { get; set; }
     public RouteValueDictionary RouteValueDictionary { get; set; }
 }
+[GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+internal partial class T4MVC_System_Web_Mvc_JsonResult : System.Web.Mvc.JsonResult, IT4MVCActionResult
+{
+    public T4MVC_System_Web_Mvc_JsonResult(string area, string controller, string action, string protocol = null): base()
+    {
+        this.InitMVCT4Result(area, controller, action, protocol);
+    }
+    
+    public string Controller { get; set; }
+    public string Action { get; set; }
+    public string Protocol { get; set; }
+    public RouteValueDictionary RouteValueDictionary { get; set; }
+}
 
 
 
 namespace Links
 {
-    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public static class Scripts {
-        private const string URLPATH = "~/Scripts";
-        public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
-        public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
-        public static readonly string bootstrap_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/bootstrap.min.js") ? Url("bootstrap.min.js") : Url("bootstrap.js");
-        public static readonly string bootstrap_min_js = Url("bootstrap.min.js");
-        public static readonly string jquery_1_9_0_intellisense_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-1.9.0.intellisense.min.js") ? Url("jquery-1.9.0.intellisense.min.js") : Url("jquery-1.9.0.intellisense.js");
-        public static readonly string jquery_1_9_0_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-1.9.0.min.js") ? Url("jquery-1.9.0.min.js") : Url("jquery-1.9.0.js");
-        public static readonly string jquery_1_9_0_min_js = Url("jquery-1.9.0.min.js");
-        public static readonly string jquery_1_9_0_min_map = Url("jquery-1.9.0.min.map");
-        public static readonly string jquery_validate_unobtrusive_chameleon_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery.validate.unobtrusive.chameleon.min.js") ? Url("jquery.validate.unobtrusive.chameleon.min.js") : Url("jquery.validate.unobtrusive.chameleon.js");
-        public static readonly string jquery_validate_unobtrusive_twitterbootstrap_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery.validate.unobtrusive.twitterbootstrap.min.js") ? Url("jquery.validate.unobtrusive.twitterbootstrap.min.js") : Url("jquery.validate.unobtrusive.twitterbootstrap.js");
-    }
-
-    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public static class Content {
-        private const string URLPATH = "~/Content";
-        public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
-        public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
-        public static readonly string bootstrap_theme_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/bootstrap-theme.min.css") ? Url("bootstrap-theme.min.css") : Url("bootstrap-theme.css");
-             
-        public static readonly string bootstrap_theme_min_css = Url("bootstrap-theme.min.css");
-        public static readonly string bootstrap_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/bootstrap.min.css") ? Url("bootstrap.min.css") : Url("bootstrap.css");
-             
-        public static readonly string bootstrap_min_css = Url("bootstrap.min.css");
-        public static readonly string chameleonforms_twitterbootstrap_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/chameleonforms-twitterbootstrap.min.css") ? Url("chameleonforms-twitterbootstrap.min.css") : Url("chameleonforms-twitterbootstrap.css");
-             
-    }
-
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
     public static class fonts {
         private const string URLPATH = "~/fonts";
@@ -105,36 +89,13 @@ namespace Links
         public static readonly string glyphicons_halflings_regular_svg = Url("glyphicons-halflings-regular.svg");
         public static readonly string glyphicons_halflings_regular_ttf = Url("glyphicons-halflings-regular.ttf");
         public static readonly string glyphicons_halflings_regular_woff = Url("glyphicons-halflings-regular.woff");
+        public static readonly string glyphicons_halflings_regular_woff2 = Url("glyphicons-halflings-regular.woff2");
     }
 
     
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
     public static partial class Bundles
     {
-        public static partial class Scripts 
-        {
-            public static class Assets
-            {
-                public const string bootstrap_js = "~/Scripts/bootstrap.js"; 
-                public const string bootstrap_min_js = "~/Scripts/bootstrap.min.js"; 
-                public const string jquery_1_9_0_intellisense_js = "~/Scripts/jquery-1.9.0.intellisense.js"; 
-                public const string jquery_1_9_0_js = "~/Scripts/jquery-1.9.0.js"; 
-                public const string jquery_1_9_0_min_js = "~/Scripts/jquery-1.9.0.min.js"; 
-                public const string jquery_validate_unobtrusive_chameleon_js = "~/Scripts/jquery.validate.unobtrusive.chameleon.js"; 
-                public const string jquery_validate_unobtrusive_twitterbootstrap_js = "~/Scripts/jquery.validate.unobtrusive.twitterbootstrap.js"; 
-            }
-        }
-        public static partial class Content 
-        {
-            public static class Assets
-            {
-                public const string bootstrap_theme_css = "~/Content/bootstrap-theme.css";
-                public const string bootstrap_theme_min_css = "~/Content/bootstrap-theme.min.css";
-                public const string bootstrap_css = "~/Content/bootstrap.css";
-                public const string bootstrap_min_css = "~/Content/bootstrap.min.css";
-                public const string chameleonforms_twitterbootstrap_css = "~/Content/chameleonforms-twitterbootstrap.css";
-            }
-        }
         public static partial class fonts 
         {
             public static class Assets

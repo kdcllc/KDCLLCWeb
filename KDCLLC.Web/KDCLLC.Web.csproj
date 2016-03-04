@@ -250,6 +250,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SalesController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
@@ -267,6 +268,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles.cs" />
     <Compile Include="Routes.cs" />
+    <Compile Include="SalesController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="SharedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -276,6 +280,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\CheckScoreAttribute.cs" />
+    <Compile Include="ViewModels\HandleModelStateExceptionAttribute.cs" />
+    <Compile Include="ViewModels\Helpers.cs" />
+    <Compile Include="ViewModels\ModelStateException.cs" />
+    <Compile Include="ViewModels\SalesOrderItemViewModel.cs" />
+    <Compile Include="ViewModels\SalesOrderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -363,6 +373,7 @@
     <Content Include="wwwroot\favicon.ico" />
     <Content Include="wwwroot\js\jquery.validate.unobtrusive.chameleon.js" />
     <Content Include="wwwroot\js\jquery.validate.unobtrusive.twitterbootstrap.js" />
+    <Content Include="wwwroot\js\salesorderviewmodel.js" />
     <Content Include="wwwroot\web.config" />
     <Content Include="wwwroot\css\bootstrap\alerts.less" />
     <Content Include="wwwroot\css\bootstrap\badges.less" />
@@ -442,6 +453,13 @@
     <Content Include="Views\Shared\_BoostrapScriptBundle.cshtml" />
     <Content Include="Views\Shared\_JqueryvalScriptBundle.cshtml" />
     <Content Include="Views\Shared\_HeaderScripts.cshtml" />
+    <Content Include="Views\Sales\Create.cshtml" />
+    <Content Include="Views\Sales\Delete.cshtml" />
+    <Content Include="Views\Sales\Details.cshtml" />
+    <Content Include="Views\Sales\Edit.cshtml" />
+    <Content Include="Views\Sales\Index.cshtml" />
+    <Content Include="Views\Shared\Sales\_DisplaySalesOrder.cshtml" />
+    <Content Include="Views\Shared\Sales\_EditSalesOrder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -451,7 +469,9 @@
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KDCLL.Identity.Services\KDCLLC.Identity.Services.csproj">
@@ -461,6 +481,10 @@
     <ProjectReference Include="..\KDCLLC.Web.Core\KDCLLC.Web.Core.csproj">
       <Project>{EDFD652B-67C0-4401-B32D-6E615B54B143}</Project>
       <Name>KDCLLC.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KDCLLC.Web.Data\KDCLLC.Web.Data.csproj">
+      <Project>{1a08a754-875e-4dbd-ab97-3e5d39def4a6}</Project>
+      <Name>KDCLLC.Web.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\KDCLLC.Web.Interfaces\KDCLLC.Web.Interfaces.csproj">
       <Project>{E41E83EA-6236-492E-8CB3-AC06371F1A17}</Project>
