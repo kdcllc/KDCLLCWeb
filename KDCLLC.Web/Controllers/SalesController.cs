@@ -2,15 +2,14 @@
 using KDCLLC.Web.Models.Data;
 using KDCLLC.Web.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 
 namespace KDCLLC.Web.Controllers
 {
+    //TODO: refactor the data access layer to the Repository object model
     public partial class SalesController : Controller
     {
         private DataContext _salesContext;
