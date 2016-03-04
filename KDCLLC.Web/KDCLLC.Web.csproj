@@ -557,6 +557,7 @@
   <Target Name="AfterPublish">
   </Target>
   <PropertyGroup>
-    <PreBuildEvent>npm install</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
 </Project>
