@@ -1,0 +1,37 @@
+﻿{
+  "ambientDependencies": {
+    "Q": "github:DefinitelyTyped/DefinitelyTyped/q/Q.d.ts#bd269cad4cb2b495f940c7b6afc5825d568029be",
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#1c4a34873c9e70cce86edd0e61c559e43dfa5f75",
+    "angular-animate": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-animate.d.ts#3c26c6546fab58b39d04d6ae40bacfa9a25dd196",
+    "angular-cookies": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-cookies.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "angular-mocks": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-mocks.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "angular-resource": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-resource.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "angular-sanitize": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular-sanitize.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "angular-ui-bootstrap": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-bootstrap/angular-ui-bootstrap.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "async": "github:DefinitelyTyped/DefinitelyTyped/async/async.d.ts#4de74cb527395c13ba20b438c3a7a419ad931f1c",
+    "chalk": "github:DefinitelyTyped/DefinitelyTyped/chalk/chalk.d.ts#2ed78584e44ade4e4d15b14b7cb00db076434819",
+    "es6-promise": "github:DefinitelyTyped/DefinitelyTyped/es6-promise/es6-promise.d.ts#923c5431d9447db9d5cf41adc5914e3c94c1ff10",
+    "gulp": "github:DefinitelyTyped/DefinitelyTyped/gulp/gulp.d.ts#bd269cad4cb2b495f940c7b6afc5825d568029be",
+    "gulp-load-plugins": "github:DefinitelyTyped/DefinitelyTyped/gulp-load-plugins/gulp-load-plugins.d.ts#e081148d88b857d66509e3b46edbd08b3f75f96a",
+    "gulp-util": "github:DefinitelyTyped/DefinitelyTyped/gulp-util/gulp-util.d.ts#5a8fc5ee71701431e4fdbb80c506e3c13f85a9ff",
+    "jasmine": "github:DefinitelyTyped/DefinitelyTyped/jasmine/jasmine.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "karma-jasmine": "github:DefinitelyTyped/DefinitelyTyped/karma-jasmine/karma-jasmine.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "moment": "github:DefinitelyTyped/DefinitelyTyped/moment/moment.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "moment-node": "github:DefinitelyTyped/DefinitelyTyped/moment/moment-node.d.ts#bb051830df88f5a55dcf06b7fe85bf6b62cc97f2",
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#bd269cad4cb2b495f940c7b6afc5825d568029be",
+    "orchestrator": "github:DefinitelyTyped/DefinitelyTyped/orchestrator/orchestrator.d.ts#bd269cad4cb2b495f940c7b6afc5825d568029be",
+    "run-sequence": "github:DefinitelyTyped/DefinitelyTyped/run-sequence/run-sequence.d.ts#bd269cad4cb2b495f940c7b6afc5825d568029be",
+    "semver": "github:DefinitelyTyped/DefinitelyTyped/semver/semver.d.ts#bd269cad4cb2b495f940c7b6afc5825d568029be",
+    "systemjs": "github:DefinitelyTyped/DefinitelyTyped/systemjs/systemjs.d.ts#5c3e47967affa3c4128a3875d1664ba206ae1b0f",
+    "through2": "github:DefinitelyTyped/DefinitelyTyped/through2/through2.d.ts#5a8fc5ee71701431e4fdbb80c506e3c13f85a9ff",
+    "vinyl": "github:DefinitelyTyped/DefinitelyTyped/vinyl/vinyl.d.ts#5a8fc5ee71701431e4fdbb80c506e3c13f85a9ff",
+    "vinyl-source-stream": "github:DefinitelyTyped/DefinitelyTyped/vinyl-source-stream/vinyl-source-stream.d.ts#ffceea9dd124d277c4597c7bd12930666ec074c5",
+    "wrench": "github:DefinitelyTyped/DefinitelyTyped/wrench/wrench.d.ts#bd269cad4cb2b495f940c7b6afc5825d568029be",
+    "yargs": "github:DefinitelyTyped/DefinitelyTyped/yargs/yargs.d.ts#bd269cad4cb2b495f940c7b6afc5825d568029be"
+  },
+  "devDependencies": {
+    "typescript": "npm:typescript"
+  }
+}

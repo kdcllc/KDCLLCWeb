@@ -10,8 +10,16 @@ Custom template project for the enterprise usage.
 ### Getting Started-Wiki:
 [Wiki](https://github.com/kdcllc/KDCLLCWeb/wiki)
 
+##TypeScript
+This template is using [Typings](https://github.com/typings/typings) manager for TypeScript typings
+and [Visual Studio.NET 2015 must be installed](https://www.microsoft.com/en-us/download/details.aspx?id=48593)
 ##Gulp Workflow for the dependencies
-
+Make sure global NPM packages are installed
+```
+npm i -g gulp
+npm i -g typings
+npm i -g 
+```
 ##Angular TypeScript
 
 ##Knockout

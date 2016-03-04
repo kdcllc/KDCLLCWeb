@@ -23,5 +23,7 @@ packages/*
 !packages/repositories.config
 node_modules
 
-KDCLLC.Web/Logs
+#Logs
+Logs
 log
+
