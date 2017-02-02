@@ -84,9 +84,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>REM Copy Dependency
-REM copy /Y "$(TargetDir)*$(TargetExt)" "$(SolutionDir)KDCLLC.Web\bin\"
-REM copy /Y "$(TargetDir)*.pdb" "$(SolutionDir)KDCLLC.Web\bin\"</PostBuildEvent>
+    <PostBuildEvent>copy /Y "$(TargetPath)" "$(SolutionDir)KDCLLC.Web\bin"
+</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

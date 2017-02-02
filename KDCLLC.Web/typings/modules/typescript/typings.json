@@ -1,0 +1,18 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "C:\\Dev\\KDCLLCWeb\\KDCLLC.Web\\node_modules\\typescript\\package.json",
+    "raw": "npm:typescript",
+    "main": "./lib/typescript.js",
+    "browser": {
+      "buffer": false,
+      "fs": false,
+      "os": false,
+      "path": false
+    },
+    "typings": "./lib/typescript.d.ts",
+    "version": "1.8.10",
+    "global": false,
+    "name": "typescript"
+  }
+}

@@ -13,7 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "*",
+    "bootstrap": "3.3.7",
     "jquery-validation-unobtrusive": "*",
     "modernizr": "~2.8.3",
     "respond": "*",
