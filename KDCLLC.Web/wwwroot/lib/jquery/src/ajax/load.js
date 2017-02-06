@@ -26,11 +26,7 @@ jQuery.fn.load = function( url, params, callback ) {
 		off = url.indexOf( " " );
 
 	if ( off > -1 ) {
-<<<<<<< HEAD
-		selector = jQuery.trim( url.slice( off ) );
-=======
 		selector = jQuery.trim( url.slice( off, url.length ) );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		url = url.slice( 0, off );
 	}
 
@@ -76,11 +72,7 @@ jQuery.fn.load = function( url, params, callback ) {
 		// If it fails, this function gets "jqXHR", "status", "error"
 		} ).always( callback && function( jqXHR, status ) {
 			self.each( function() {
-<<<<<<< HEAD
-				callback.apply( self, response || [ jqXHR.responseText, status, jqXHR ] );
-=======
 				callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			} );
 		} );
 	}

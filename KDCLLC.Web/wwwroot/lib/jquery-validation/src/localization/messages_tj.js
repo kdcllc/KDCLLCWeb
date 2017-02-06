@@ -2,11 +2,7 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: TJ (Tajikistan; Забони тоҷикӣ)
  */
-<<<<<<< HEAD
-$.extend($.validator.messages, {
-=======
 $.extend( $.validator.messages, {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Ворид кардани ин филд маҷбури аст.",
 	remote: "Илтимос, маълумоти саҳеҳ ворид кунед.",
 	email: "Илтимос, почтаи электронии саҳеҳ ворид кунед.",
@@ -18,15 +14,6 @@ $.extend( $.validator.messages, {
 	creditcard: "Илтимос, кредит карди саҳеҳ ворид кунед.",
 	equalTo: "Илтимос, миқдори баробар ворид кунед.",
 	extension: "Илтимос, қофияи файлро дуруст интихоб кунед",
-<<<<<<< HEAD
-	maxlength: $.validator.format("Илтимос, бештар аз {0} рамз ворид накунед."),
-	minlength: $.validator.format("Илтимос, камтар аз {0} рамз ворид накунед."),
-	rangelength: $.validator.format("Илтимос, камтар аз {0} ва зиёда аз {1} рамз ворид кунед."),
-	range: $.validator.format("Илтимос, аз {0} то {1} рақам зиёд ворид кунед."),
-	max: $.validator.format("Илтимос, бештар аз {0} рақам ворид накунед."),
-	min: $.validator.format("Илтимос, камтар аз {0} рақам ворид накунед.")
-});
-=======
 	maxlength: $.validator.format( "Илтимос, бештар аз {0} рамз ворид накунед." ),
 	minlength: $.validator.format( "Илтимос, камтар аз {0} рамз ворид накунед." ),
 	rangelength: $.validator.format( "Илтимос, камтар аз {0} ва зиёда аз {1} рамз ворид кунед." ),
@@ -34,4 +21,3 @@ $.extend( $.validator.messages, {
 	max: $.validator.format( "Илтимос, бештар аз {0} рақам ворид накунед." ),
 	min: $.validator.format( "Илтимос, камтар аз {0} рақам ворид накунед." )
 } );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

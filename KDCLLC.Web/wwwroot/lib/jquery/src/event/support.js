@@ -1,10 +1,4 @@
 define( [
-<<<<<<< HEAD
-	"../var/support"
-], function( support ) {
-
-support.focusin = "onfocusin" in window;
-=======
 	"../var/document",
 	"../var/support"
 ], function( document, support ) {
@@ -28,7 +22,6 @@ support.focusin = "onfocusin" in window;
 	// Null elements to avoid leaks in IE.
 	div = null;
 } )();
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 return support;
 

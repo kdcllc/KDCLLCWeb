@@ -1,9 +1,5 @@
 define( [
-<<<<<<< HEAD
-	"./var/arr",
-=======
 	"./var/deletedIds",
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	"./var/document",
 	"./var/slice",
 	"./var/concat",
@@ -13,12 +9,8 @@ define( [
 	"./var/toString",
 	"./var/hasOwn",
 	"./var/support"
-<<<<<<< HEAD
-], function( arr, document, slice, concat, push, indexOf, class2type, toString, hasOwn, support ) {
-=======
 ], function( deletedIds, document, slice, concat, push, indexOf,
 	class2type, toString, hasOwn, support ) {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 var
 	version = "@VERSION",
@@ -31,11 +23,7 @@ var
 		return new jQuery.fn.init( selector, context );
 	},
 
-<<<<<<< HEAD
-	// Support: Android<4.1
-=======
 	// Support: Android<4.1, IE<9
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	// Make sure we trim BOM and NBSP
 	rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,
 
@@ -128,21 +116,12 @@ jQuery.fn = jQuery.prototype = {
 	// For internal use only.
 	// Behaves like an Array's method, not like a jQuery method.
 	push: push,
-<<<<<<< HEAD
-	sort: arr.sort,
-	splice: arr.splice
-};
-
-jQuery.extend = jQuery.fn.extend = function() {
-	var options, name, src, copy, copyIsArray, clone,
-=======
 	sort: deletedIds.sort,
 	splice: deletedIds.splice
 };
 
 jQuery.extend = jQuery.fn.extend = function() {
 	var src, copyIsArray, copy, name, options, clone,
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		target = arguments[ 0 ] || {},
 		i = 1,
 		length = arguments.length,
@@ -152,11 +131,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 	if ( typeof target === "boolean" ) {
 		deep = target;
 
-<<<<<<< HEAD
-		// Skip the boolean and the target
-=======
 		// skip the boolean and the target
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		target = arguments[ i ] || {};
 		i++;
 	}
@@ -166,11 +141,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 		target = {};
 	}
 
-<<<<<<< HEAD
-	// Extend jQuery itself if only one argument is passed
-=======
 	// extend jQuery itself if only one argument is passed
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	if ( i === length ) {
 		target = this;
 		i--;
@@ -232,22 +203,13 @@ jQuery.extend( {
 
 	noop: function() {},
 
-<<<<<<< HEAD
-=======
 	// See test/unit/core.js for details concerning isFunction.
 	// Since version 1.3, DOM methods and functions like alert
 	// aren't supported. They return false on IE (#2968).
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	isFunction: function( obj ) {
 		return jQuery.type( obj ) === "function";
 	},
 
-<<<<<<< HEAD
-	isArray: Array.isArray,
-
-	isWindow: function( obj ) {
-		return obj != null && obj === obj.window;
-=======
 	isArray: Array.isArray || function( obj ) {
 		return jQuery.type( obj ) === "array";
 	},
@@ -255,7 +217,6 @@ jQuery.extend( {
 	isWindow: function( obj ) {
 		/* jshint eqeqeq: false */
 		return obj != null && obj == obj.window;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	},
 
 	isNumeric: function( obj ) {
@@ -268,34 +229,6 @@ jQuery.extend( {
 		return !jQuery.isArray( obj ) && ( realStringObj - parseFloat( realStringObj ) + 1 ) >= 0;
 	},
 
-<<<<<<< HEAD
-	isPlainObject: function( obj ) {
-
-		// Not plain objects:
-		// - Any object or value whose internal [[Class]] property is not "[object Object]"
-		// - DOM nodes
-		// - window
-		if ( jQuery.type( obj ) !== "object" || obj.nodeType || jQuery.isWindow( obj ) ) {
-			return false;
-		}
-
-		if ( obj.constructor &&
-				!hasOwn.call( obj.constructor.prototype, "isPrototypeOf" ) ) {
-			return false;
-		}
-
-		// If the function hasn't returned already, we're confident that
-		// |obj| is a plain object, created by {} or constructed with new Object
-		return true;
-	},
-
-	isEmptyObject: function( obj ) {
-		var name;
-		for ( name in obj ) {
-			return false;
-		}
-		return true;
-=======
 	isEmptyObject: function( obj ) {
 		var name;
 		for ( name in obj ) {
@@ -341,48 +274,17 @@ jQuery.extend( {
 		for ( key in obj ) {}
 
 		return key === undefined || hasOwn.call( obj, key );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	},
 
 	type: function( obj ) {
 		if ( obj == null ) {
 			return obj + "";
 		}
-<<<<<<< HEAD
-
-		// Support: Android<4.0, iOS<6 (functionish RegExp)
-=======
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		return typeof obj === "object" || typeof obj === "function" ?
 			class2type[ toString.call( obj ) ] || "object" :
 			typeof obj;
 	},
 
-<<<<<<< HEAD
-	// Evaluates a script in a global context
-	globalEval: function( code ) {
-		var script,
-			indirect = eval;
-
-		code = jQuery.trim( code );
-
-		if ( code ) {
-
-			// If the code includes a valid, prologue position
-			// strict mode pragma, execute code by injecting a
-			// script tag into the document.
-			if ( code.indexOf( "use strict" ) === 1 ) {
-				script = document.createElement( "script" );
-				script.text = code;
-				document.head.appendChild( script ).parentNode.removeChild( script );
-			} else {
-
-				// Otherwise, avoid the DOM node creation, insertion
-				// and removal by using an indirect global eval
-
-				indirect( code );
-			}
-=======
 	// Workarounds based on findings by Jim Driscoll
 	// http://weblogs.java.net/blog/driscoll/archive/2009/09/08/eval-javascript-global-context
 	globalEval: function( data ) {
@@ -394,15 +296,10 @@ jQuery.extend( {
 			( window.execScript || function( data ) {
 				window[ "eval" ].call( window, data ); // jscs:ignore requireDotNotation
 			} )( data );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		}
 	},
 
 	// Convert dashed to camelCase; used by the css and data modules
-<<<<<<< HEAD
-	// Support: IE9-11+
-=======
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	// Microsoft forgot to hump their vendor prefix (#9572)
 	camelCase: function( string ) {
 		return string.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase );
@@ -433,11 +330,7 @@ jQuery.extend( {
 		return obj;
 	},
 
-<<<<<<< HEAD
-	// Support: Android<4.1
-=======
 	// Support: Android<4.1, IE<9
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	trim: function( text ) {
 		return text == null ?
 			"" :
@@ -463,9 +356,6 @@ jQuery.extend( {
 	},
 
 	inArray: function( elem, arr, i ) {
-<<<<<<< HEAD
-		return arr == null ? -1 : indexOf.call( arr, elem, i );
-=======
 		var len;
 
 		if ( arr ) {
@@ -486,7 +376,6 @@ jQuery.extend( {
 		}
 
 		return -1;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	},
 
 	merge: function( first, second ) {
@@ -494,10 +383,6 @@ jQuery.extend( {
 			j = 0,
 			i = first.length;
 
-<<<<<<< HEAD
-		for ( ; j < len; j++ ) {
-			first[ i++ ] = second[ j ];
-=======
 		while ( j < len ) {
 			first[ i++ ] = second[ j++ ];
 		}
@@ -508,7 +393,6 @@ jQuery.extend( {
 			while ( second[ j ] !== undefined ) {
 				first[ i++ ] = second[ j++ ];
 			}
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		}
 
 		first.length = i;
@@ -573,11 +457,7 @@ jQuery.extend( {
 	// Bind a function to a context, optionally partially applying any
 	// arguments.
 	proxy: function( fn, context ) {
-<<<<<<< HEAD
-		var tmp, args, proxy;
-=======
 		var args, proxy, tmp;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 		if ( typeof context === "string" ) {
 			tmp = fn[ context ];
@@ -603,13 +483,9 @@ jQuery.extend( {
 		return proxy;
 	},
 
-<<<<<<< HEAD
-	now: Date.now,
-=======
 	now: function() {
 		return +( new Date() );
 	},
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 	// jQuery.support is not used in Core but other projects attach their
 	// properties to it so it needs to exist.
@@ -622,11 +498,7 @@ jQuery.extend( {
 // three lines.
 /* jshint ignore: start */
 if ( typeof Symbol === "function" ) {
-<<<<<<< HEAD
-	jQuery.fn[ Symbol.iterator ] = arr[ Symbol.iterator ];
-=======
 	jQuery.fn[ Symbol.iterator ] = deletedIds[ Symbol.iterator ];
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 }
 /* jshint ignore: end */
 

@@ -4,32 +4,6 @@ define( [
 ], function( document, support ) {
 
 ( function() {
-<<<<<<< HEAD
-	var input = document.createElement( "input" ),
-		select = document.createElement( "select" ),
-		opt = select.appendChild( document.createElement( "option" ) );
-
-	input.type = "checkbox";
-
-	// Support: iOS<=5.1, Android<=4.2+
-	// Default value for a checkbox should be "on"
-	support.checkOn = input.value !== "";
-
-	// Support: IE<=11+
-	// Must access selectedIndex to make default options select
-	support.optSelected = opt.selected;
-
-	// Support: Android<=2.3
-	// Options inside disabled selects are incorrectly marked as disabled
-	select.disabled = true;
-	support.optDisabled = !opt.disabled;
-
-	// Support: IE<=11+
-	// An input loses its value after becoming a radio
-	input = document.createElement( "input" );
-	input.value = "t";
-	input.type = "radio";
-=======
 	var a,
 		input = document.createElement( "input" ),
 		div = document.createElement( "div" ),
@@ -88,7 +62,6 @@ define( [
 	// Check if an input maintains its value after becoming a radio
 	input.value = "t";
 	input.setAttribute( "type", "radio" );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	support.radioValue = input.value === "t";
 } )();
 

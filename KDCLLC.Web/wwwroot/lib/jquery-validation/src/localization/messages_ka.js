@@ -2,11 +2,7 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: KA (Georgian; ქართული)
  */
-<<<<<<< HEAD
-$.extend($.validator.messages, {
-=======
 $.extend( $.validator.messages, {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "ამ ველის შევსება აუცილებელია.",
 	remote: "გთხოვთ მიუთითოთ სწორი მნიშვნელობა.",
 	email: "გთხოვთ მიუთითოთ ელ-ფოსტის კორექტული მისამართი.",
@@ -18,15 +14,6 @@ $.extend( $.validator.messages, {
 	creditcard: "გთხოვთ მიუთითოთ საკრედიტო ბარათის კორექტული ნომერი.",
 	equalTo: "გთხოვთ მიუთითოთ ასეთივე მნიშვნელობა კიდევ ერთხელ.",
 	extension: "გთხოვთ აირჩიოთ ფაილი კორექტული გაფართოებით.",
-<<<<<<< HEAD
-	maxlength: $.validator.format("დასაშვებია არაუმეტეს {0} სიმბოლო."),
-	minlength: $.validator.format("აუცილებელია შეიყვანოთ მინიმუმ {0} სიმბოლო."),
-	rangelength: $.validator.format("ტექსტში სიმბოლოების რაოდენობა უნდა იყოს {0}-დან {1}-მდე."),
-	range: $.validator.format("გთხოვთ შეიყვანოთ ციფრი {0}-დან {1}-მდე."),
-	max: $.validator.format("გთხოვთ შეიყვანოთ ციფრი რომელიც ნაკლებია ან უდრის {0}-ს."),
-	min: $.validator.format("გთხოვთ შეიყვანოთ ციფრი რომელიც მეტია ან უდრის {0}-ს.")
-});
-=======
 	maxlength: $.validator.format( "დასაშვებია არაუმეტეს {0} სიმბოლო." ),
 	minlength: $.validator.format( "აუცილებელია შეიყვანოთ მინიმუმ {0} სიმბოლო." ),
 	rangelength: $.validator.format( "ტექსტში სიმბოლოების რაოდენობა უნდა იყოს {0}-დან {1}-მდე." ),
@@ -34,4 +21,3 @@ $.extend( $.validator.messages, {
 	max: $.validator.format( "გთხოვთ შეიყვანოთ ციფრი რომელიც ნაკლებია ან უდრის {0}-ს." ),
 	min: $.validator.format( "გთხოვთ შეიყვანოთ ციფრი რომელიც მეტია ან უდრის {0}-ს." )
 } );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

@@ -3,13 +3,9 @@
  * Locale: PT (Portuguese; português)
  * Region: BR (Brazil)
  */
-<<<<<<< HEAD
-$.extend($.validator.messages, {
-=======
 $.extend( $.validator.messages, {
 
 	// Core
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Este campo &eacute; requerido.",
 	remote: "Por favor, corrija este campo.",
 	email: "Por favor, forne&ccedil;a um endere&ccedil;o de email v&aacute;lido.",
@@ -20,21 +16,6 @@ $.extend( $.validator.messages, {
 	digits: "Por favor, forne&ccedil;a somente d&iacute;gitos.",
 	creditcard: "Por favor, forne&ccedil;a um cart&atilde;o de cr&eacute;dito v&aacute;lido.",
 	equalTo: "Por favor, forne&ccedil;a o mesmo valor novamente.",
-<<<<<<< HEAD
-	extension: "Por favor, forne&ccedil;a um valor com uma extens&atilde;o v&aacute;lida.",
-	maxlength: $.validator.format("Por favor, forne&ccedil;a n&atilde;o mais que {0} caracteres."),
-	minlength: $.validator.format("Por favor, forne&ccedil;a ao menos {0} caracteres."),
-	rangelength: $.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1} caracteres de comprimento."),
-	range: $.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1}."),
-	max: $.validator.format("Por favor, forne&ccedil;a um valor menor ou igual a {0}."),
-	min: $.validator.format("Por favor, forne&ccedil;a um valor maior ou igual a {0}."),
-	nifES: "Por favor, forne&ccedil;a um NIF v&aacute;lido.",
-	nieES: "Por favor, forne&ccedil;a um NIE v&aacute;lido.",
-	cifEE: "Por favor, forne&ccedil;a um CIF v&aacute;lido.",
-	postalcodeBR: "Por favor, forne&ccedil;a um CEP v&aacute;lido.",
-	cpfBR: "Por favor, forne&ccedil;a um CPF v&aacute;lido."
-});
-=======
 	maxlength: $.validator.format( "Por favor, forne&ccedil;a n&atilde;o mais que {0} caracteres." ),
 	minlength: $.validator.format( "Por favor, forne&ccedil;a ao menos {0} caracteres." ),
 	rangelength: $.validator.format( "Por favor, forne&ccedil;a um valor entre {0} e {1} caracteres de comprimento." ),
@@ -93,4 +74,3 @@ $.extend( $.validator.messages, {
 	ziprange: "O c&oacute;digo postal deve estar entre 902xx-xxxx e 905xx-xxxx",
 	cpfBR: "Por favor, forne&ccedil;a um CPF v&aacute;lido."
 } );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

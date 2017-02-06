@@ -102,11 +102,7 @@ jQuery.fn.extend( {
 		.filter( function() {
 			var type = this.type;
 
-<<<<<<< HEAD
-			// Use .is( ":disabled" ) so that fieldset[disabled] works
-=======
 			// Use .is(":disabled") so that fieldset[disabled] works
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			return this.name && !jQuery( this ).is( ":disabled" ) &&
 				rsubmittable.test( this.nodeName ) && !rsubmitterTypes.test( type ) &&
 				( this.checked || !rcheckableType.test( type ) );

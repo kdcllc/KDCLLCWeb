@@ -7,15 +7,9 @@ define( [
 // Create innerHeight, innerWidth, height, width, outerHeight and outerWidth methods
 jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 	jQuery.each( { padding: "inner" + name, content: type, "": "outer" + name },
-<<<<<<< HEAD
-		function( defaultExtra, funcName ) {
-
-		// Margin is only for outerHeight, outerWidth
-=======
 	function( defaultExtra, funcName ) {
 
 		// margin is only for outerHeight, outerWidth
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		jQuery.fn[ funcName ] = function( margin, value ) {
 			var chainable = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
 				extra = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
@@ -37,11 +31,8 @@ jQuery.each( { Height: "height", Width: "width" }, function( name, type ) {
 
 					// Either scroll[Width/Height] or offset[Width/Height] or client[Width/Height],
 					// whichever is greatest
-<<<<<<< HEAD
-=======
 					// unfortunately, this causes bug #3838 in IE6/8 only,
 					// but there is currently no good, small way to fix it.
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 					return Math.max(
 						elem.body[ "scroll" + name ], doc[ "scroll" + name ],
 						elem.body[ "offset" + name ], doc[ "offset" + name ],

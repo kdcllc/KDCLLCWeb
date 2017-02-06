@@ -1,15 +1,8 @@
 /* ========================================================================
-<<<<<<< HEAD
- * Bootstrap: dropdown.js v3.3.5
- * http://getbootstrap.com/javascript/#dropdowns
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
-=======
  * Bootstrap: dropdown.js v3.3.7
  * http://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -26,11 +19,7 @@
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
-<<<<<<< HEAD
-  Dropdown.VERSION = '3.3.5'
-=======
   Dropdown.VERSION = '3.3.7'
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
   function getParent($this) {
     var selector = $this.attr('data-target')
@@ -62,11 +51,7 @@
       if (e.isDefaultPrevented()) return
 
       $this.attr('aria-expanded', 'false')
-<<<<<<< HEAD
-      $parent.removeClass('open').trigger('hidden.bs.dropdown', relatedTarget)
-=======
       $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     })
   }
 
@@ -100,11 +85,7 @@
 
       $parent
         .toggleClass('open')
-<<<<<<< HEAD
-        .trigger('shown.bs.dropdown', relatedTarget)
-=======
         .trigger($.Event('shown.bs.dropdown', relatedTarget))
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     }
 
     return false

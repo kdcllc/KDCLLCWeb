@@ -1,15 +1,8 @@
 /* ========================================================================
-<<<<<<< HEAD
- * Bootstrap: button.js v3.3.5
- * http://getbootstrap.com/javascript/#buttons
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
-=======
  * Bootstrap: button.js v3.3.7
  * http://getbootstrap.com/javascript/#buttons
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -26,11 +19,7 @@
     this.isLoading = false
   }
 
-<<<<<<< HEAD
-  Button.VERSION  = '3.3.5'
-=======
   Button.VERSION  = '3.3.7'
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
   Button.DEFAULTS = {
     loadingText: 'loading...'
@@ -52,17 +41,10 @@
 
       if (state == 'loadingText') {
         this.isLoading = true
-<<<<<<< HEAD
-        $el.addClass(d).attr(d, d)
-      } else if (this.isLoading) {
-        this.isLoading = false
-        $el.removeClass(d).removeAttr(d)
-=======
         $el.addClass(d).attr(d, d).prop(d, true)
       } else if (this.isLoading) {
         this.isLoading = false
         $el.removeClass(d).removeAttr(d).prop(d, false)
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
       }
     }, this), 0)
   }
@@ -126,12 +108,6 @@
 
   $(document)
     .on('click.bs.button.data-api', '[data-toggle^="button"]', function (e) {
-<<<<<<< HEAD
-      var $btn = $(e.target)
-      if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
-      Plugin.call($btn, 'toggle')
-      if (!($(e.target).is('input[type="radio"]') || $(e.target).is('input[type="checkbox"]'))) e.preventDefault()
-=======
       var $btn = $(e.target).closest('.btn')
       Plugin.call($btn, 'toggle')
       if (!($(e.target).is('input[type="radio"], input[type="checkbox"]'))) {
@@ -141,7 +117,6 @@
         if ($btn.is('input,button')) $btn.trigger('focus')
         else $btn.find('input:visible,button:visible').first().trigger('focus')
       }
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     })
     .on('focus.bs.button.data-api blur.bs.button.data-api', '[data-toggle^="button"]', function (e) {
       $(e.target).closest('.btn').toggleClass('focus', /^focus(in)?$/.test(e.type))

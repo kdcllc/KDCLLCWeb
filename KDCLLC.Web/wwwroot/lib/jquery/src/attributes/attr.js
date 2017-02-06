@@ -3,13 +3,6 @@ define( [
 	"../core/access",
 	"./support",
 	"../var/rnotwhite",
-<<<<<<< HEAD
-	"../selector"
-], function( jQuery, access, support, rnotwhite ) {
-
-var boolHook,
-	attrHandle = jQuery.expr.attrHandle;
-=======
 	"./val",
 	"../selector"
 ], function( jQuery, access, support, rnotwhite ) {
@@ -19,7 +12,6 @@ var nodeHook, boolHook,
 	ruseDefault = /^(?:checked|selected)$/i,
 	getSetAttribute = support.getSetAttribute,
 	getSetInput = support.input;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 jQuery.fn.extend( {
 	attr: function( name, value ) {
@@ -53,11 +45,7 @@ jQuery.extend( {
 		if ( nType !== 1 || !jQuery.isXMLDoc( elem ) ) {
 			name = name.toLowerCase();
 			hooks = jQuery.attrHooks[ name ] ||
-<<<<<<< HEAD
-				( jQuery.expr.match.bool.test( name ) ? boolHook : undefined );
-=======
 				( jQuery.expr.match.bool.test( name ) ? boolHook : nodeHook );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		}
 
 		if ( value !== undefined ) {
@@ -90,12 +78,9 @@ jQuery.extend( {
 			set: function( elem, value ) {
 				if ( !support.radioValue && value === "radio" &&
 					jQuery.nodeName( elem, "input" ) ) {
-<<<<<<< HEAD
-=======
 
 					// Setting the type on a radio button after the value resets the value in IE8-9
 					// Reset value to default in case type is set after value during creation
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 					var val = elem.value;
 					elem.setAttribute( "type", value );
 					if ( val ) {
@@ -120,12 +105,6 @@ jQuery.extend( {
 				if ( jQuery.expr.match.bool.test( name ) ) {
 
 					// Set corresponding property to false
-<<<<<<< HEAD
-					elem[ propName ] = false;
-				}
-
-				elem.removeAttribute( name );
-=======
 					if ( getSetInput && getSetAttribute || !ruseDefault.test( name ) ) {
 						elem[ propName ] = false;
 
@@ -142,7 +121,6 @@ jQuery.extend( {
 				}
 
 				elem.removeAttribute( getSetAttribute ? name : propName );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			}
 		}
 	}
@@ -155,10 +133,6 @@ boolHook = {
 
 			// Remove boolean attributes when set to false
 			jQuery.removeAttr( elem, name );
-<<<<<<< HEAD
-		} else {
-			elem.setAttribute( name, name );
-=======
 		} else if ( getSetInput && getSetAttribute || !ruseDefault.test( name ) ) {
 
 			// IE<8 needs the *property* name
@@ -169,31 +143,10 @@ boolHook = {
 			// Support: IE<9
 			// Use defaultChecked and defaultSelected for oldIE
 			elem[ jQuery.camelCase( "default-" + name ) ] = elem[ name ] = true;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		}
 		return name;
 	}
 };
-<<<<<<< HEAD
-jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) {
-	var getter = attrHandle[ name ] || jQuery.find.attr;
-
-	attrHandle[ name ] = function( elem, name, isXML ) {
-		var ret, handle;
-		if ( !isXML ) {
-
-			// Avoid an infinite loop by temporarily removing this function from the getter
-			handle = attrHandle[ name ];
-			attrHandle[ name ] = ret;
-			ret = getter( elem, name, isXML ) != null ?
-				name.toLowerCase() :
-				null;
-			attrHandle[ name ] = handle;
-		}
-		return ret;
-	};
-} );
-=======
 
 jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) {
 	var getter = attrHandle[ name ] || jQuery.find.attr;
@@ -324,6 +277,5 @@ if ( !support.style ) {
 		}
 	};
 }
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 } );

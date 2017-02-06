@@ -2,12 +2,6 @@ define( [
 	"../core"
 ], function( jQuery ) {
 
-<<<<<<< HEAD
-// Support: Android 2.3
-// Workaround failure to string-cast null input
-jQuery.parseJSON = function( data ) {
-	return JSON.parse( data + "" );
-=======
 var rvalidtokens = /(,)|(\[|{)|(}|])|"(?:[^"\\\r\n]|\\["\\\/bfnrt]|\\u[\da-fA-F]{4})*"\s*:?|true|false|null|-?(?!0\d)\d+(?:\.\d+|)(?:[eE][+-]?\d+|)/g;
 
 jQuery.parseJSON = function( data ) {
@@ -52,7 +46,6 @@ jQuery.parseJSON = function( data ) {
 	} ) ) ?
 		( Function( "return " + str ) )() :
 		jQuery.error( "Invalid JSON: " + data );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 };
 
 return jQuery.parseJSON;

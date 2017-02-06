@@ -2,11 +2,7 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: RO (Romanian, limba română)
  */
-<<<<<<< HEAD
-$.extend($.validator.messages, {
-=======
 $.extend( $.validator.messages, {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Acest câmp este obligatoriu.",
 	remote: "Te rugăm să completezi acest câmp.",
 	email: "Te rugăm să introduci o adresă de email validă",
@@ -18,15 +14,6 @@ $.extend( $.validator.messages, {
 	creditcard: "Te rugăm să introduci un numar de carte de credit valid.",
 	equalTo: "Te rugăm să reintroduci valoarea.",
 	extension: "Te rugăm să introduci o valoare cu o extensie validă.",
-<<<<<<< HEAD
-	maxlength: $.validator.format("Te rugăm să nu introduci mai mult de {0} caractere."),
-	minlength: $.validator.format("Te rugăm să introduci cel puțin {0} caractere."),
-	rangelength: $.validator.format("Te rugăm să introduci o valoare între {0} și {1} caractere."),
-	range: $.validator.format("Te rugăm să introduci o valoare între {0} și {1}."),
-	max: $.validator.format("Te rugăm să introduci o valoare egal sau mai mică decât {0}."),
-	min: $.validator.format("Te rugăm să introduci o valoare egal sau mai mare decât {0}.")
-});
-=======
 	maxlength: $.validator.format( "Te rugăm să nu introduci mai mult de {0} caractere." ),
 	minlength: $.validator.format( "Te rugăm să introduci cel puțin {0} caractere." ),
 	rangelength: $.validator.format( "Te rugăm să introduci o valoare între {0} și {1} caractere." ),
@@ -34,4 +21,3 @@ $.extend( $.validator.messages, {
 	max: $.validator.format( "Te rugăm să introduci o valoare egal sau mai mică decât {0}." ),
 	min: $.validator.format( "Te rugăm să introduci o valoare egal sau mai mare decât {0}." )
 } );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

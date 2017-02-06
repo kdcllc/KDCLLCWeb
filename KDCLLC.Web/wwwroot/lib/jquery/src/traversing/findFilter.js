@@ -33,11 +33,7 @@ function winnow( elements, qualifier, not ) {
 	}
 
 	return jQuery.grep( elements, function( elem ) {
-<<<<<<< HEAD
-		return ( indexOf.call( qualifier, elem ) > -1 ) !== not;
-=======
 		return ( jQuery.inArray( elem, qualifier ) > -1 ) !== not;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	} );
 }
 
@@ -58,15 +54,9 @@ jQuery.filter = function( expr, elems, not ) {
 jQuery.fn.extend( {
 	find: function( selector ) {
 		var i,
-<<<<<<< HEAD
-			len = this.length,
-			ret = [],
-			self = this;
-=======
 			ret = [],
 			self = this,
 			len = self.length;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 		if ( typeof selector !== "string" ) {
 			return this.pushStack( jQuery( selector ).filter( function() {

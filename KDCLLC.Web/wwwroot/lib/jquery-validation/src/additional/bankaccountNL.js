@@ -4,17 +4,6 @@
  * We accept the notation with spaces, as that is common.
  * acceptable: 123456789 or 12 34 56 789
  */
-<<<<<<< HEAD
-$.validator.addMethod("bankaccountNL", function(value, element) {
-	if (this.optional(element)) {
-		return true;
-	}
-	if (!(/^[0-9]{9}|([0-9]{2} ){3}[0-9]{3}$/.test(value))) {
-		return false;
-	}
-	// now '11 check'
-	var account = value.replace(/ /g, ""), // remove spaces
-=======
 $.validator.addMethod( "bankaccountNL", function( value, element ) {
 	if ( this.optional( element ) ) {
 		return true;
@@ -25,22 +14,13 @@ $.validator.addMethod( "bankaccountNL", function( value, element ) {
 
 	// Now '11 check'
 	var account = value.replace( / /g, "" ), // Remove spaces
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		sum = 0,
 		len = account.length,
 		pos, factor, digit;
 	for ( pos = 0; pos < len; pos++ ) {
 		factor = len - pos;
-<<<<<<< HEAD
-		digit = account.substring(pos, pos + 1);
-		sum = sum + factor * digit;
-	}
-	return sum % 11 === 0;
-}, "Please specify a valid bank account number");
-=======
 		digit = account.substring( pos, pos + 1 );
 		sum = sum + factor * digit;
 	}
 	return sum % 11 === 0;
 }, "Please specify a valid bank account number" );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

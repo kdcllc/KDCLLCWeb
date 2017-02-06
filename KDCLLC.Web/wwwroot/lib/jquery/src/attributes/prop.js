@@ -5,11 +5,7 @@ define( [
 	"../selector"
 ], function( jQuery, access, support ) {
 
-<<<<<<< HEAD
-var rfocusable = /^(?:input|select|textarea|button)$/i,
-=======
 var rfocusable = /^(?:input|select|textarea|button|object)$/i,
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	rclickable = /^(?:a|area)$/i;
 
 jQuery.fn.extend( {
@@ -18,10 +14,6 @@ jQuery.fn.extend( {
 	},
 
 	removeProp: function( name ) {
-<<<<<<< HEAD
-		return this.each( function() {
-			delete this[ jQuery.propFix[ name ] || name ];
-=======
 		name = jQuery.propFix[ name ] || name;
 		return this.each( function() {
 
@@ -30,7 +22,6 @@ jQuery.fn.extend( {
 				this[ name ] = undefined;
 				delete this[ name ];
 			} catch ( e ) {}
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		} );
 	}
 } );
@@ -94,8 +85,6 @@ jQuery.extend( {
 	}
 } );
 
-<<<<<<< HEAD
-=======
 // Some attributes require a special call on IE
 // http://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
 if ( !support.hrefNormalized ) {
@@ -116,17 +105,10 @@ if ( !support.hrefNormalized ) {
 // on the option
 // The getter ensures a default option is selected
 // when in an optgroup
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 if ( !support.optSelected ) {
 	jQuery.propHooks.selected = {
 		get: function( elem ) {
 			var parent = elem.parentNode;
-<<<<<<< HEAD
-			if ( parent && parent.parentNode ) {
-				parent.parentNode.selectedIndex;
-			}
-			return null;
-=======
 
 			if ( parent ) {
 				parent.selectedIndex;
@@ -147,7 +129,6 @@ if ( !support.optSelected ) {
 					parent.parentNode.selectedIndex;
 				}
 			}
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		}
 	};
 }
@@ -167,12 +148,9 @@ jQuery.each( [
 	jQuery.propFix[ this.toLowerCase() ] = this;
 } );
 
-<<<<<<< HEAD
-=======
 // IE6/7 call enctype encoding
 if ( !support.enctype ) {
 	jQuery.propFix.enctype = "encoding";
 }
 
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 } );

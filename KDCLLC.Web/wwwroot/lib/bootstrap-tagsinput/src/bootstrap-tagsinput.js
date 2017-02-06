@@ -5,10 +5,7 @@
     tagClass: function(item) {
       return 'label label-info';
     },
-<<<<<<< HEAD
-=======
     focusClass: 'focus',
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     itemValue: function(item) {
       return item ? item.toString() : item;
     },
@@ -30,12 +27,8 @@
       $tag.hide().fadeIn();
     },
     trimValue: false,
-<<<<<<< HEAD
-    allowDuplicates: false
-=======
     allowDuplicates: false,
     triggerChange: true
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   };
 
   /**
@@ -106,11 +99,7 @@
           }
 
           if (!dontPushVal)
-<<<<<<< HEAD
-            self.pushVal();
-=======
             self.pushVal(self.options.triggerChange);
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
           return;
         }
       }
@@ -166,11 +155,7 @@
       }
 
       if (!dontPushVal)
-<<<<<<< HEAD
-        self.pushVal();
-=======
         self.pushVal(self.options.triggerChange);
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
       // Add class when reached maxTags
       if (self.options.maxTags === self.itemsArray.length || self.items().toString().length === self.options.maxInputLength)
@@ -217,11 +202,7 @@
       }
 
       if (!dontPushVal)
-<<<<<<< HEAD
-        self.pushVal();
-=======
         self.pushVal(self.options.triggerChange);
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
       // Remove class when reached maxTags
       if (self.options.maxTags > self.itemsArray.length)
@@ -242,11 +223,7 @@
       while(self.itemsArray.length > 0)
         self.itemsArray.pop();
 
-<<<<<<< HEAD
-      self.pushVal();
-=======
       self.pushVal(self.options.triggerChange);
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     },
 
     /**
@@ -293,14 +270,10 @@
             return self.options.itemValue(item).toString();
           });
 
-<<<<<<< HEAD
-      self.$element.val(val, true).trigger('change');
-=======
       self.$element.val(val, true);
 
       if (self.options.triggerChange)
         self.$element.trigger('change');
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     },
 
     /**
@@ -411,8 +384,6 @@
           }, self));
         }
 
-<<<<<<< HEAD
-=======
       // Toggle the 'focus' css class on the container when it has focus
       self.$container.on({
         focusin: function() {
@@ -422,7 +393,6 @@
           self.$container.removeClass(self.options.focusClass);
         },
       });
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
       self.$container.on('keydown', 'input', $.proxy(function(event) {
         var $input = $(event.target),

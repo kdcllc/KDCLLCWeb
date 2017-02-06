@@ -7,11 +7,6 @@ define( [
 
 jQuery.fn.extend( {
 	wrapAll: function( html ) {
-<<<<<<< HEAD
-		var wrap;
-
-=======
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		if ( jQuery.isFunction( html ) ) {
 			return this.each( function( i ) {
 				jQuery( this ).wrapAll( html.call( this, i ) );
@@ -21,11 +16,7 @@ jQuery.fn.extend( {
 		if ( this[ 0 ] ) {
 
 			// The elements to wrap the target around
-<<<<<<< HEAD
-			wrap = jQuery( html, this[ 0 ].ownerDocument ).eq( 0 ).clone( true );
-=======
 			var wrap = jQuery( html, this[ 0 ].ownerDocument ).eq( 0 ).clone( true );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 			if ( this[ 0 ].parentNode ) {
 				wrap.insertBefore( this[ 0 ] );
@@ -34,13 +25,8 @@ jQuery.fn.extend( {
 			wrap.map( function() {
 				var elem = this;
 
-<<<<<<< HEAD
-				while ( elem.firstElementChild ) {
-					elem = elem.firstElementChild;
-=======
 				while ( elem.firstChild && elem.firstChild.nodeType === 1 ) {
 					elem = elem.firstChild;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				}
 
 				return elem;

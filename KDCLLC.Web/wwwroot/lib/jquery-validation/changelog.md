@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 1.15.1 / 2016-07-22
 ==================
 
@@ -76,7 +74,6 @@
   * Included messages from additional methods
   * Improving pt_BR translation and fixing a typo on the 'cifES' key.
   
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 1.14.0 / 2015-06-30
 ==================
 

@@ -1,10 +1,6 @@
 {
   "name": "jquery-validation-bootstrap-tooltip",
-<<<<<<< HEAD
-  "version": "0.10.1",
-=======
   "version": "0.10.2",
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   "description": "A drop in extension replacing error labels from jQuery Validation plugin with Twitter Bootstrap tooltips",
   "main": "jquery-validate.bootstrap-tooltip.js",
   "repository": {

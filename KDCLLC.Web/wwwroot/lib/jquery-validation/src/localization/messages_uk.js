@@ -2,11 +2,7 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: UK (Ukrainian; українська мова)
  */
-<<<<<<< HEAD
-$.extend($.validator.messages, {
-=======
 $.extend( $.validator.messages, {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Це поле необхідно заповнити.",
 	remote: "Будь ласка, введіть правильне значення.",
 	email: "Будь ласка, введіть коректну адресу електронної пошти.",
@@ -18,15 +14,6 @@ $.extend( $.validator.messages, {
 	creditcard: "Будь ласка, введіть правильний номер кредитної карти.",
 	equalTo: "Будь ласка, введіть таке ж значення ще раз.",
 	extension: "Будь ласка, виберіть файл з правильним розширенням.",
-<<<<<<< HEAD
-	maxlength: $.validator.format("Будь ласка, введіть не більше {0} символів."),
-	minlength: $.validator.format("Будь ласка, введіть не менше {0} символів."),
-	rangelength: $.validator.format("Будь ласка, введіть значення довжиною від {0} до {1} символів."),
-	range: $.validator.format("Будь ласка, введіть число від {0} до {1}."),
-	max: $.validator.format("Будь ласка, введіть число, менше або рівно {0}."),
-	min: $.validator.format("Будь ласка, введіть число, більше або рівно {0}.")
-});
-=======
 	maxlength: $.validator.format( "Будь ласка, введіть не більше {0} символів." ),
 	minlength: $.validator.format( "Будь ласка, введіть не менше {0} символів." ),
 	rangelength: $.validator.format( "Будь ласка, введіть значення довжиною від {0} до {1} символів." ),
@@ -34,4 +21,3 @@ $.extend( $.validator.messages, {
 	max: $.validator.format( "Будь ласка, введіть число, менше або рівно {0}." ),
 	min: $.validator.format( "Будь ласка, введіть число, більше або рівно {0}." )
 } );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

@@ -2,11 +2,7 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: CA (Catalan; català)
  */
-<<<<<<< HEAD
-$.extend($.validator.messages, {
-=======
 $.extend( $.validator.messages, {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Aquest camp és obligatori.",
 	remote: "Si us plau, omple aquest camp.",
 	email: "Si us plau, escriu una adreça de correu-e vàlida",
@@ -18,15 +14,6 @@ $.extend( $.validator.messages, {
 	creditcard: "Si us plau, escriu un número de tarjeta vàlid.",
 	equalTo: "Si us plau, escriu el mateix valor de nou.",
 	extension: "Si us plau, escriu un valor amb una extensió acceptada.",
-<<<<<<< HEAD
-	maxlength: $.validator.format("Si us plau, no escriguis més de {0} caracters."),
-	minlength: $.validator.format("Si us plau, no escriguis menys de {0} caracters."),
-	rangelength: $.validator.format("Si us plau, escriu un valor entre {0} i {1} caracters."),
-	range: $.validator.format("Si us plau, escriu un valor entre {0} i {1}."),
-	max: $.validator.format("Si us plau, escriu un valor menor o igual a {0}."),
-	min: $.validator.format("Si us plau, escriu un valor major o igual a {0}.")
-});
-=======
 	maxlength: $.validator.format( "Si us plau, no escriguis més de {0} caracters." ),
 	minlength: $.validator.format( "Si us plau, no escriguis menys de {0} caracters." ),
 	rangelength: $.validator.format( "Si us plau, escriu un valor entre {0} i {1} caracters." ),
@@ -34,4 +21,3 @@ $.extend( $.validator.messages, {
 	max: $.validator.format( "Si us plau, escriu un valor menor o igual a {0}." ),
 	min: $.validator.format( "Si us plau, escriu un valor major o igual a {0}." )
 } );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

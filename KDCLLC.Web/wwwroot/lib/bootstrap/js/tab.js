@@ -1,15 +1,8 @@
 /* ========================================================================
-<<<<<<< HEAD
- * Bootstrap: tab.js v3.3.5
- * http://getbootstrap.com/javascript/#tabs
- * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
-=======
  * Bootstrap: tab.js v3.3.7
  * http://getbootstrap.com/javascript/#tabs
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -26,11 +19,7 @@
     // jscs:enable requireDollarBeforejQueryAssignment
   }
 
-<<<<<<< HEAD
-  Tab.VERSION = '3.3.5'
-=======
   Tab.VERSION = '3.3.7'
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
   Tab.TRANSITION_DURATION = 150
 

@@ -62,14 +62,6 @@ jQuery.extend( {
 } );
 
 /**
-<<<<<<< HEAD
- * The ready event handler and self cleanup method
- */
-function completed() {
-	document.removeEventListener( "DOMContentLoaded", completed );
-	window.removeEventListener( "load", completed );
-	jQuery.ready();
-=======
  * Clean-up method for dom ready events
  */
 function detach() {
@@ -96,7 +88,6 @@ function completed() {
 		detach();
 		jQuery.ready();
 	}
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 }
 
 jQuery.ready.promise = function( obj ) {
@@ -106,11 +97,7 @@ jQuery.ready.promise = function( obj ) {
 
 		// Catch cases where $(document).ready() is called
 		// after the browser event has already occurred.
-<<<<<<< HEAD
-		// Support: IE9-10 only
-=======
 		// Support: IE6-10
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		// Older IE sometimes signals "interactive" too soon
 		if ( document.readyState === "complete" ||
 			( document.readyState !== "loading" && !document.documentElement.doScroll ) ) {
@@ -118,20 +105,14 @@ jQuery.ready.promise = function( obj ) {
 			// Handle it asynchronously to allow scripts the opportunity to delay ready
 			window.setTimeout( jQuery.ready );
 
-<<<<<<< HEAD
-		} else {
-=======
 		// Standards-based browsers support DOMContentLoaded
 		} else if ( document.addEventListener ) {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 			// Use the handy event callback
 			document.addEventListener( "DOMContentLoaded", completed );
 
 			// A fallback to window.onload, that will always work
 			window.addEventListener( "load", completed );
-<<<<<<< HEAD
-=======
 
 		// If IE event model is used
 		} else {
@@ -171,7 +152,6 @@ jQuery.ready.promise = function( obj ) {
 					}
 				} )();
 			}
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		}
 	}
 	return readyList.promise( obj );

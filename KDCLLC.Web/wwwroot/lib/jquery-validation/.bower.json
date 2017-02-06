@@ -27,16 +27,6 @@
   "dependencies": {
     "jquery": ">= 1.7.2"
   },
-<<<<<<< HEAD
-  "version": "1.14.0",
-  "_release": "1.14.0",
-  "_resolution": {
-    "type": "version",
-    "tag": "1.14.0",
-    "commit": "c1343fb9823392aa9acbe1c3ffd337b8c92fed48"
-  },
-  "_source": "git://github.com/jzaefferer/jquery-validation.git",
-=======
   "version": "1.16.0",
   "_release": "1.16.0",
   "_resolution": {
@@ -45,7 +35,6 @@
     "commit": "29b9c702b9c831419f9f774d2acb86f42f803e11"
   },
   "_source": "https://github.com/jzaefferer/jquery-validation.git",
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   "_target": ">=1.8",
   "_originalSource": "jquery-validation"
 }

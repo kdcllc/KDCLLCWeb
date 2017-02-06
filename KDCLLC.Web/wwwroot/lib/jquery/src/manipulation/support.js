@@ -1,19 +1,4 @@
 define( [
-<<<<<<< HEAD
-	"../var/document",
-	"../var/support"
-], function( document, support ) {
-
-( function() {
-	var fragment = document.createDocumentFragment(),
-		div = fragment.appendChild( document.createElement( "div" ) ),
-		input = document.createElement( "input" );
-
-	// Support: Android 4.0-4.3, Safari<=5.1
-	// Check state lost if the name is set (#11217)
-	// Support: Windows Web Apps (WWA)
-	// `name` and `type` must use .setAttribute for WWA (#14901)
-=======
 	"../core",
 	"../var/document",
 	"../var/support"
@@ -61,23 +46,12 @@ define( [
 	// Support: Windows Web Apps (WWA)
 	// `name` and `type` must use .setAttribute for WWA (#14901)
 	input = document.createElement( "input" );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	input.setAttribute( "type", "radio" );
 	input.setAttribute( "checked", "checked" );
 	input.setAttribute( "name", "t" );
 
 	div.appendChild( input );
 
-<<<<<<< HEAD
-	// Support: Safari<=5.1, Android<4.2
-	// Older WebKit doesn't clone checked state correctly in fragments
-	support.checkClone = div.cloneNode( true ).cloneNode( true ).lastChild.checked;
-
-	// Support: IE<=11+
-	// Make sure textarea (and checkbox) defaultValue is properly cloned
-	div.innerHTML = "<textarea>x</textarea>";
-	support.noCloneChecked = !!div.cloneNode( true ).lastChild.defaultValue;
-=======
 	// Support: Safari 5.1, iOS 5.1, Android 4.x, Android 2.3
 	// old WebKit doesn't clone checked state correctly in fragments
 	support.checkClone = div.cloneNode( true ).cloneNode( true ).lastChild.checked;
@@ -91,7 +65,6 @@ define( [
 	// cleanData must set properties to undefined rather than use removeAttribute
 	div[ jQuery.expando ] = 1;
 	support.attributes = !div.getAttribute( jQuery.expando );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 } )();
 
 return support;

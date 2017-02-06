@@ -1,10 +1,6 @@
 {
     "name": "jquery-validation-unobtrusive",
-<<<<<<< HEAD
-    "version": "3.2.4",
-=======
     "version": "3.2.6",
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     "homepage": "https://github.com/aspnet/jquery-validation-unobtrusive",
     "description": "Add-on to jQuery Validation to enable unobtrusive validation options in data-* attributes.",
     "main": [
@@ -15,10 +11,7 @@
         "*.json",
         "*.md",
         "*.txt",
-<<<<<<< HEAD
-=======
         "!LICENSE.txt",
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
         "gulpfile.js"
     ],
     "keywords": [

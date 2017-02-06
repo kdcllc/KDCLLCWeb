@@ -9,11 +9,7 @@ module.exports = function(grunt) {
         fragments: './build/fragments/',
         banner: '/*!\n' +
                 ' * Knockout JavaScript library v<%= pkg.version %>\n' +
-<<<<<<< HEAD
-                ' * (c) Steven Sanderson - <%= pkg.homepage %>\n' +
-=======
                 ' * (c) The Knockout.js team - <%= pkg.homepage %>\n' +
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
                 ' * License: <%= pkg.licenses[0].type %> (<%= pkg.licenses[0].url %>)\n' +
                 ' */\n\n',
 

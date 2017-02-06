@@ -1,12 +1,6 @@
 define( [
 	"../core",
-<<<<<<< HEAD
-
-	"../event",
-	"./trigger"
-=======
 	"../event"
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 ], function( jQuery ) {
 
 jQuery.each( ( "blur focus focusin focusout load resize scroll unload click dblclick " +

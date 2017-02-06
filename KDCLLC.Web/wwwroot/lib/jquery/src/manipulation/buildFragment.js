@@ -1,22 +1,5 @@
 define( [
 	"../core",
-<<<<<<< HEAD
-	"./var/rtagName",
-	"./var/rscriptType",
-	"./wrapMap",
-	"./getAll",
-	"./setGlobalEval"
-], function( jQuery, rtagName, rscriptType, wrapMap, getAll, setGlobalEval ) {
-
-var rhtml = /<|&#?\w+;/;
-
-function buildFragment( elems, context, scripts, selection, ignored ) {
-	var elem, tmp, tag, wrap, contains, j,
-		fragment = context.createDocumentFragment(),
-		nodes = [],
-		i = 0,
-		l = elems.length;
-=======
 	"./var/rcheckableType",
 	"./var/rtagName",
 	"./var/rscriptType",
@@ -48,7 +31,6 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 
 		nodes = [],
 		i = 0;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 	for ( ; i < l; i++ ) {
 		elem = elems[ i ];
@@ -57,12 +39,6 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 
 			// Add nodes directly
 			if ( jQuery.type( elem ) === "object" ) {
-<<<<<<< HEAD
-
-				// Support: Android<4.1, PhantomJS<2
-				// push.apply(_, arraylike) throws on ancient WebKit
-=======
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				jQuery.merge( nodes, elem.nodeType ? [ elem ] : elem );
 
 			// Convert non-html into a text node
@@ -71,19 +47,12 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 
 			// Convert html into DOM nodes
 			} else {
-<<<<<<< HEAD
-				tmp = tmp || fragment.appendChild( context.createElement( "div" ) );
-=======
 				tmp = tmp || safe.appendChild( context.createElement( "div" ) );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 				// Deserialize a standard representation
 				tag = ( rtagName.exec( elem ) || [ "", "" ] )[ 1 ].toLowerCase();
 				wrap = wrapMap[ tag ] || wrapMap._default;
-<<<<<<< HEAD
-=======
 
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				tmp.innerHTML = wrap[ 1 ] + jQuery.htmlPrefilter( elem ) + wrap[ 2 ];
 
 				// Descend through wrappers to the right content
@@ -92,17 +61,6 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 					tmp = tmp.lastChild;
 				}
 
-<<<<<<< HEAD
-				// Support: Android<4.1, PhantomJS<2
-				// push.apply(_, arraylike) throws on ancient WebKit
-				jQuery.merge( nodes, tmp.childNodes );
-
-				// Remember the top-level container
-				tmp = fragment.firstChild;
-
-				// Ensure the created nodes are orphaned (#12392)
-				tmp.textContent = "";
-=======
 				// Manually add leading whitespace removed by IE
 				if ( !support.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
 					nodes.push( context.createTextNode( rleadingWhitespace.exec( elem )[ 0 ] ) );
@@ -142,15 +100,10 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 
 				// Remember the top-level container for proper cleanup
 				tmp = safe.lastChild;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			}
 		}
 	}
 
-<<<<<<< HEAD
-	// Remove wrapper from fragment
-	fragment.textContent = "";
-=======
 	// Fix #11356: Clear elements from fragment
 	if ( tmp ) {
 		safe.removeChild( tmp );
@@ -161,7 +114,6 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 	if ( !support.appendChecked ) {
 		jQuery.grep( getAll( nodes, "input" ), fixDefaultChecked );
 	}
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 	i = 0;
 	while ( ( elem = nodes[ i++ ] ) ) {
@@ -171,21 +123,14 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 			if ( ignored ) {
 				ignored.push( elem );
 			}
-<<<<<<< HEAD
-=======
 
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			continue;
 		}
 
 		contains = jQuery.contains( elem.ownerDocument, elem );
 
 		// Append to fragment
-<<<<<<< HEAD
-		tmp = getAll( fragment.appendChild( elem ), "script" );
-=======
 		tmp = getAll( safe.appendChild( elem ), "script" );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 		// Preserve script evaluation history
 		if ( contains ) {
@@ -203,13 +148,9 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 		}
 	}
 
-<<<<<<< HEAD
-	return fragment;
-=======
 	tmp = null;
 
 	return safe;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 }
 
 return buildFragment;

@@ -2,11 +2,7 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: MY (Malay; Melayu)
  */
-<<<<<<< HEAD
-$.extend($.validator.messages, {
-=======
 $.extend( $.validator.messages, {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Medan ini diperlukan.",
 	remote: "Sila betulkan medan ini.",
 	email: "Sila masukkan alamat emel yang betul.",
@@ -18,15 +14,6 @@ $.extend( $.validator.messages, {
 	creditcard: "Sila masukkan nombor kredit kad yang betul.",
 	equalTo: "Sila masukkan nilai yang sama semula.",
 	extension: "Sila masukkan nilai yang telah diterima.",
-<<<<<<< HEAD
-	maxlength: $.validator.format("Sila masukkan nilai tidak lebih dari {0} aksara."),
-	minlength: $.validator.format("Sila masukkan nilai sekurang-kurangnya {0} aksara."),
-	rangelength: $.validator.format("Sila masukkan panjang nilai antara {0} dan {1} aksara."),
-	range: $.validator.format("Sila masukkan nilai antara {0} dan {1} aksara."),
-	max: $.validator.format("Sila masukkan nilai yang kurang atau sama dengan {0}."),
-	min: $.validator.format("Sila masukkan nilai yang lebih atau sama dengan {0}.")
-});
-=======
 	maxlength: $.validator.format( "Sila masukkan tidak lebih dari {0} aksara." ),
 	minlength: $.validator.format( "Sila masukkan sekurang-kurangnya {0} aksara." ),
 	rangelength: $.validator.format( "Sila masukkan antara {0} dan {1} panjang aksara." ),
@@ -34,4 +21,3 @@ $.extend( $.validator.messages, {
 	max: $.validator.format( "Sila masukkan nilai yang kurang atau sama dengan {0}." ),
 	min: $.validator.format( "Sila masukkan nilai yang lebih atau sama dengan {0}." )
 } );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

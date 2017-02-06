@@ -1,15 +1,8 @@
 define( [
 	"./core",
-<<<<<<< HEAD
-	"./data/var/dataPriv",
-	"./deferred",
-	"./callbacks"
-], function( jQuery, dataPriv ) {
-=======
 	"./deferred",
 	"./callbacks"
 ], function( jQuery ) {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 jQuery.extend( {
 	queue: function( elem, type, data ) {
@@ -17,20 +10,12 @@ jQuery.extend( {
 
 		if ( elem ) {
 			type = ( type || "fx" ) + "queue";
-<<<<<<< HEAD
-			queue = dataPriv.get( elem, type );
-=======
 			queue = jQuery._data( elem, type );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 			// Speed up dequeue by getting out quickly if this is just a lookup
 			if ( data ) {
 				if ( !queue || jQuery.isArray( data ) ) {
-<<<<<<< HEAD
-					queue = dataPriv.access( elem, type, jQuery.makeArray( data ) );
-=======
 					queue = jQuery._data( elem, type, jQuery.makeArray( data ) );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				} else {
 					queue.push( data );
 				}
@@ -64,11 +49,7 @@ jQuery.extend( {
 				queue.unshift( "inprogress" );
 			}
 
-<<<<<<< HEAD
-			// Clear up the last queue stop function
-=======
 			// clear up the last queue stop function
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			delete hooks.stop;
 			fn.call( elem, next, hooks );
 		}
@@ -78,14 +59,6 @@ jQuery.extend( {
 		}
 	},
 
-<<<<<<< HEAD
-	// Not public - generate a queueHooks object, or return the current one
-	_queueHooks: function( elem, type ) {
-		var key = type + "queueHooks";
-		return dataPriv.get( elem, key ) || dataPriv.access( elem, key, {
-			empty: jQuery.Callbacks( "once memory" ).add( function() {
-				dataPriv.remove( elem, [ type + "queue", key ] );
-=======
 	// not intended for public consumption - generates a queueHooks object,
 	// or returns the current one
 	_queueHooks: function( elem, type ) {
@@ -94,7 +67,6 @@ jQuery.extend( {
 			empty: jQuery.Callbacks( "once memory" ).add( function() {
 				jQuery._removeData( elem, type + "queue" );
 				jQuery._removeData( elem, key );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			} )
 		} );
 	}
@@ -119,11 +91,7 @@ jQuery.fn.extend( {
 			this.each( function() {
 				var queue = jQuery.queue( this, type, data );
 
-<<<<<<< HEAD
-				// Ensure a hooks for this queue
-=======
 				// ensure a hooks for this queue
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				jQuery._queueHooks( this, type );
 
 				if ( type === "fx" && queue[ 0 ] !== "inprogress" ) {
@@ -161,11 +129,7 @@ jQuery.fn.extend( {
 		type = type || "fx";
 
 		while ( i-- ) {
-<<<<<<< HEAD
-			tmp = dataPriv.get( elements[ i ], type + "queueHooks" );
-=======
 			tmp = jQuery._data( elements[ i ], type + "queueHooks" );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			if ( tmp && tmp.empty ) {
 				count++;
 				tmp.empty.add( resolve );

@@ -2,18 +2,6 @@ define( [
 	"./core",
 	"./var/document",
 	"./var/rnotwhite",
-<<<<<<< HEAD
-	"./var/slice",
-	"./data/var/dataPriv",
-
-	"./core/init",
-	"./selector"
-], function( jQuery, document, rnotwhite, slice, dataPriv ) {
-
-var
-	rkeyEvent = /^key/,
-	rmouseEvent = /^(?:mouse|pointer|contextmenu|drag|drop)|click/,
-=======
 	"./var/hasOwn",
 	"./var/slice",
 	"./event/support",
@@ -28,7 +16,6 @@ var rformElems = /^(?:input|select|textarea)$/i,
 	rkeyEvent = /^key/,
 	rmouseEvent = /^(?:mouse|pointer|contextmenu|drag|drop)|click/,
 	rfocusMorph = /^(?:focusinfocus|focusoutblur)$/,
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	rtypenamespace = /^([^.]*)(?:\.(.+)|)/;
 
 function returnTrue() {
@@ -117,18 +104,10 @@ jQuery.event = {
 	global: {},
 
 	add: function( elem, types, handler, data, selector ) {
-<<<<<<< HEAD
-
-		var handleObjIn, eventHandle, tmp,
-			events, t, handleObj,
-			special, handlers, type, namespaces, origType,
-			elemData = dataPriv.get( elem );
-=======
 		var tmp, events, t, handleObjIn,
 			special, eventHandle, handleObj,
 			handlers, type, namespaces, origType,
 			elemData = jQuery._data( elem );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 		// Don't attach events to noData or text/comment nodes (but allow plain objects)
 		if ( !elemData ) {
@@ -156,11 +135,6 @@ jQuery.event = {
 
 				// Discard the second event of a jQuery.event.trigger() and
 				// when an event is called after a page has unloaded
-<<<<<<< HEAD
-				return typeof jQuery !== "undefined" && jQuery.event.triggered !== e.type ?
-					jQuery.event.dispatch.apply( elem, arguments ) : undefined;
-			};
-=======
 				return typeof jQuery !== "undefined" &&
 					( !e || jQuery.event.triggered !== e.type ) ?
 					jQuery.event.dispatch.apply( eventHandle.elem, arguments ) :
@@ -170,7 +144,6 @@ jQuery.event = {
 			// Add elem as a property of the handle fn to prevent a memory leak
 			// with IE non-native events
 			eventHandle.elem = elem;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		}
 
 		// Handle multiple events separated by a space
@@ -212,14 +185,6 @@ jQuery.event = {
 				handlers = events[ type ] = [];
 				handlers.delegateCount = 0;
 
-<<<<<<< HEAD
-				// Only use addEventListener if the special events handler returns false
-				if ( !special.setup ||
-					special.setup.call( elem, data, namespaces, eventHandle ) === false ) {
-
-					if ( elem.addEventListener ) {
-						elem.addEventListener( type, eventHandle );
-=======
 				// Only use addEventListener/attachEvent if the special events handler returns false
 				if ( !special.setup ||
 					special.setup.call( elem, data, namespaces, eventHandle ) === false ) {
@@ -230,7 +195,6 @@ jQuery.event = {
 
 					} else if ( elem.attachEvent ) {
 						elem.attachEvent( "on" + type, eventHandle );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 					}
 				}
 			}
@@ -254,28 +218,17 @@ jQuery.event = {
 			jQuery.event.global[ type ] = true;
 		}
 
-<<<<<<< HEAD
-=======
 		// Nullify elem to prevent memory leaks in IE
 		elem = null;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	},
 
 	// Detach an event or set of events from an element
 	remove: function( elem, types, handler, selector, mappedTypes ) {
-<<<<<<< HEAD
-
-		var j, origCount, tmp,
-			events, t, handleObj,
-			special, handlers, type, namespaces, origType,
-			elemData = dataPriv.hasData( elem ) && dataPriv.get( elem );
-=======
 		var j, handleObj, tmp,
 			origCount, t, events,
 			special, handlers, type,
 			namespaces, origType,
 			elemData = jQuery.hasData( elem ) && jQuery._data( elem );
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 		if ( !elemData || !( events = elemData.events ) ) {
 			return;
@@ -337,14 +290,6 @@ jQuery.event = {
 			}
 		}
 
-<<<<<<< HEAD
-		// Remove data and the expando if it's no longer used
-		if ( jQuery.isEmptyObject( events ) ) {
-			dataPriv.remove( elem, "handle events" );
-		}
-	},
-
-=======
 		// Remove the expando if it's no longer used
 		if ( jQuery.isEmptyObject( events ) ) {
 			delete elemData.handle;
@@ -500,7 +445,6 @@ jQuery.event = {
 		return event.result;
 	},
 
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	dispatch: function( event ) {
 
 		// Make a writable jQuery.Event from the native event object
@@ -509,11 +453,7 @@ jQuery.event = {
 		var i, j, ret, matched, handleObj,
 			handlerQueue = [],
 			args = slice.call( arguments ),
-<<<<<<< HEAD
-			handlers = ( dataPriv.get( this, "events" ) || {} )[ event.type ] || [],
-=======
 			handlers = ( jQuery._data( this, "events" ) || {} )[ event.type ] || [],
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			special = jQuery.event.special[ event.type ] || {};
 
 		// Use the fix-ed jQuery.Event rather than the (read-only) native event
@@ -580,13 +520,9 @@ jQuery.event = {
 		if ( delegateCount && cur.nodeType &&
 			( event.type !== "click" || isNaN( event.button ) || event.button < 1 ) ) {
 
-<<<<<<< HEAD
-			for ( ; cur !== this; cur = cur.parentNode || this ) {
-=======
 			/* jshint eqeqeq: false */
 			for ( ; cur != this; cur = cur.parentNode || this ) {
 				/* jshint eqeqeq: true */
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 				// Don't check non-elements (#13208)
 				// Don't process clicks on disabled elements (#6911, #8165, #11382, #11764)
@@ -622,8 +558,6 @@ jQuery.event = {
 		return handlerQueue;
 	},
 
-<<<<<<< HEAD
-=======
 	fix: function( event ) {
 		if ( event[ jQuery.expando ] ) {
 			return event;
@@ -670,7 +604,6 @@ jQuery.event = {
 		return fixHook.filter ? fixHook.filter( event, originalEvent ) : event;
 	},
 
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	// Includes some event props shared by KeyEvent and MouseEvent
 	props: ( "altKey bubbles cancelable ctrlKey currentTarget detail eventPhase " +
 		"metaKey relatedTarget shiftKey target timeStamp view which" ).split( " " ),
@@ -691,20 +624,12 @@ jQuery.event = {
 	},
 
 	mouseHooks: {
-<<<<<<< HEAD
-		props: ( "button buttons clientX clientY offsetX offsetY pageX pageY " +
-			"screenX screenY toElement" ).split( " " ),
-		filter: function( event, original ) {
-			var eventDoc, doc, body,
-				button = original.button;
-=======
 		props: ( "button buttons clientX clientY fromElement offsetX offsetY " +
 			"pageX pageY screenX screenY toElement" ).split( " " ),
 		filter: function( event, original ) {
 			var body, eventDoc, doc,
 				button = original.button,
 				fromElement = original.fromElement;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 			// Calculate pageX/Y if missing and clientX/Y available
 			if ( event.pageX == null && original.clientX != null ) {
@@ -720,8 +645,6 @@ jQuery.event = {
 					( doc && doc.clientTop  || body && body.clientTop  || 0 );
 			}
 
-<<<<<<< HEAD
-=======
 			// Add relatedTarget, if necessary
 			if ( !event.relatedTarget && fromElement ) {
 				event.relatedTarget = fromElement === event.target ?
@@ -729,7 +652,6 @@ jQuery.event = {
 					fromElement;
 			}
 
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			// Add which for click: 1 === left; 2 === middle; 3 === right
 			// Note: button is not normalized, so don't use it
 			if ( !event.which && button !== undefined ) {
@@ -740,51 +662,6 @@ jQuery.event = {
 		}
 	},
 
-<<<<<<< HEAD
-	fix: function( event ) {
-		if ( event[ jQuery.expando ] ) {
-			return event;
-		}
-
-		// Create a writable copy of the event object and normalize some properties
-		var i, prop, copy,
-			type = event.type,
-			originalEvent = event,
-			fixHook = this.fixHooks[ type ];
-
-		if ( !fixHook ) {
-			this.fixHooks[ type ] = fixHook =
-				rmouseEvent.test( type ) ? this.mouseHooks :
-				rkeyEvent.test( type ) ? this.keyHooks :
-				{};
-		}
-		copy = fixHook.props ? this.props.concat( fixHook.props ) : this.props;
-
-		event = new jQuery.Event( originalEvent );
-
-		i = copy.length;
-		while ( i-- ) {
-			prop = copy[ i ];
-			event[ prop ] = originalEvent[ prop ];
-		}
-
-		// Support: Cordova 2.5 (WebKit) (#13255)
-		// All events should have a target; Cordova deviceready doesn't
-		if ( !event.target ) {
-			event.target = document;
-		}
-
-		// Support: Safari 6.0+, Chrome<28
-		// Target should not be a text node (#504, #13143)
-		if ( event.target.nodeType === 3 ) {
-			event.target = event.target.parentNode;
-		}
-
-		return fixHook.filter ? fixHook.filter( event, originalEvent ) : event;
-	},
-
-=======
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	special: {
 		load: {
 
@@ -796,10 +673,6 @@ jQuery.event = {
 			// Fire native event if possible so blur/focus sequence is correct
 			trigger: function() {
 				if ( this !== safeActiveElement() && this.focus ) {
-<<<<<<< HEAD
-					this.focus();
-					return false;
-=======
 					try {
 						this.focus();
 						return false;
@@ -809,7 +682,6 @@ jQuery.event = {
 						// If we error on focus to hidden element (#1486, #12518),
 						// let .trigger() run the handlers
 					}
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				}
 			},
 			delegateType: "focusin"
@@ -827,11 +699,7 @@ jQuery.event = {
 
 			// For checkbox, fire native event so checked state will be right
 			trigger: function() {
-<<<<<<< HEAD
-				if ( this.type === "checkbox" && this.click && jQuery.nodeName( this, "input" ) ) {
-=======
 				if ( jQuery.nodeName( this, "input" ) && this.type === "checkbox" && this.click ) {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 					this.click();
 					return false;
 				}
@@ -853,19 +721,6 @@ jQuery.event = {
 				}
 			}
 		}
-<<<<<<< HEAD
-	}
-};
-
-jQuery.removeEvent = function( elem, type, handle ) {
-
-	// This "if" is needed for plain objects
-	if ( elem.removeEventListener ) {
-		elem.removeEventListener( type, handle );
-	}
-};
-
-=======
 	},
 
 	// Piggyback on a donor event to simulate a different one
@@ -920,7 +775,6 @@ jQuery.removeEvent = document.removeEventListener ?
 		}
 	};
 
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 jQuery.Event = function( src, props ) {
 
 	// Allow instantiation without the 'new' keyword
@@ -938,11 +792,7 @@ jQuery.Event = function( src, props ) {
 		this.isDefaultPrevented = src.defaultPrevented ||
 				src.defaultPrevented === undefined &&
 
-<<<<<<< HEAD
-				// Support: Android<4.0
-=======
 				// Support: IE < 9, Android < 4.0
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				src.returnValue === false ?
 			returnTrue :
 			returnFalse;
@@ -976,11 +826,6 @@ jQuery.Event.prototype = {
 		var e = this.originalEvent;
 
 		this.isDefaultPrevented = returnTrue;
-<<<<<<< HEAD
-
-		if ( e ) {
-			e.preventDefault();
-=======
 		if ( !e ) {
 			return;
 		}
@@ -993,7 +838,6 @@ jQuery.Event.prototype = {
 		// Otherwise set the returnValue property of the original event to false
 		} else {
 			e.returnValue = false;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		}
 	},
 	stopPropagation: function() {
@@ -1001,11 +845,6 @@ jQuery.Event.prototype = {
 
 		this.isPropagationStopped = returnTrue;
 
-<<<<<<< HEAD
-		if ( e ) {
-			e.stopPropagation();
-		}
-=======
 		if ( !e || this.isSimulated ) {
 			return;
 		}
@@ -1018,18 +857,13 @@ jQuery.Event.prototype = {
 		// Support: IE
 		// Set the cancelBubble property of the original event to true
 		e.cancelBubble = true;
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	},
 	stopImmediatePropagation: function() {
 		var e = this.originalEvent;
 
 		this.isImmediatePropagationStopped = returnTrue;
 
-<<<<<<< HEAD
-		if ( e ) {
-=======
 		if ( e && e.stopImmediatePropagation ) {
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			e.stopImmediatePropagation();
 		}
 
@@ -1073,9 +907,6 @@ jQuery.each( {
 	};
 } );
 
-<<<<<<< HEAD
-jQuery.fn.extend( {
-=======
 // IE submit delegation
 if ( !support.submit ) {
 
@@ -1243,7 +1074,6 @@ if ( !support.focusin ) {
 
 jQuery.fn.extend( {
 
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	on: function( types, selector, data, fn ) {
 		return on( this, types, selector, data, fn );
 	},
@@ -1285,8 +1115,6 @@ jQuery.fn.extend( {
 		return this.each( function() {
 			jQuery.event.remove( this, types, fn, selector );
 		} );
-<<<<<<< HEAD
-=======
 	},
 
 	trigger: function( type, data ) {
@@ -1299,7 +1127,6 @@ jQuery.fn.extend( {
 		if ( elem ) {
 			return jQuery.event.trigger( type, data, elem, true );
 		}
->>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	}
 } );
 
