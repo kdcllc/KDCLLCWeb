@@ -1,7 +1,11 @@
 /*!
  * Bootstrap's Gruntfile
  * http://getbootstrap.com
+<<<<<<< HEAD
  * Copyright 2013-2015 Twitter, Inc.
+=======
+ * Copyright 2013-2016 Twitter, Inc.
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
@@ -17,7 +21,10 @@ module.exports = function (grunt) {
 
   var fs = require('fs');
   var path = require('path');
+<<<<<<< HEAD
   var npmShrinkwrap = require('npm-shrinkwrap');
+=======
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   var generateGlyphiconsData = require('./grunt/bs-glyphicons-data-generator.js');
   var BsLessdocParser = require('./grunt/bs-lessdoc-parser.js');
   var getLessVarsData = function () {
@@ -130,7 +137,11 @@ module.exports = function (grunt) {
           warnings: false
         },
         mangle: true,
+<<<<<<< HEAD
         preserveComments: 'some'
+=======
+        preserveComments: /^!|@preserve|@license|@cc_on/i
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
       },
       core: {
         src: '<%= concat.bootstrap.dest %>',
@@ -231,6 +242,11 @@ module.exports = function (grunt) {
         //    and then simplify the fix for https://github.com/twbs/bootstrap/issues/14837 accordingly
         compatibility: 'ie8',
         keepSpecialComments: '*',
+<<<<<<< HEAD
+=======
+        sourceMap: true,
+        sourceMapInlineSources: true,
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
         advanced: false
       },
       minifyCore: {
@@ -243,6 +259,10 @@ module.exports = function (grunt) {
       },
       docs: {
         src: [
+<<<<<<< HEAD
+=======
+          'docs/assets/css/ie10-viewport-bug-workaround.css',
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
           'docs/assets/css/src/pygments-manni.css',
           'docs/assets/css/src/docs.css'
         ],
@@ -275,7 +295,11 @@ module.exports = function (grunt) {
     copy: {
       fonts: {
         expand: true,
+<<<<<<< HEAD
         src: 'fonts/*',
+=======
+        src: 'fonts/**',
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
         dest: 'dist/'
       },
       docs: {
@@ -299,7 +323,13 @@ module.exports = function (grunt) {
 
     jekyll: {
       options: {
+<<<<<<< HEAD
         config: '_config.yml'
+=======
+        bundleExec: true,
+        config: '_config.yml',
+        incremental: false
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
       },
       docs: {},
       github: {
@@ -312,12 +342,36 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
+<<<<<<< HEAD
           collapseWhitespace: true,
           conservativeCollapse: true,
           minifyCSS: true,
           minifyJS: true,
           removeAttributeQuotes: true,
           removeComments: true
+=======
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          decodeEntities: false,
+          minifyCSS: {
+            compatibility: 'ie8',
+            keepSpecialComments: 0
+          },
+          minifyJS: true,
+          minifyURLs: false,
+          processConditionalComments: true,
+          removeAttributeQuotes: true,
+          removeComments: true,
+          removeOptionalAttributes: true,
+          removeOptionalTags: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          removeTagWhitespace: false,
+          sortAttributes: true,
+          sortClassName: true
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
         },
         expand: true,
         cwd: '_gh_pages',
@@ -329,17 +383,29 @@ module.exports = function (grunt) {
       }
     },
 
+<<<<<<< HEAD
     jade: {
+=======
+    pug: {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
       options: {
         pretty: true,
         data: getLessVarsData
       },
       customizerVars: {
+<<<<<<< HEAD
         src: 'docs/_jade/customizer-variables.jade',
         dest: 'docs/_includes/customizer-variables.html'
       },
       customizerNav: {
         src: 'docs/_jade/customizer-nav.jade',
+=======
+        src: 'docs/_pug/customizer-variables.pug',
+        dest: 'docs/_includes/customizer-variables.html'
+      },
+      customizerNav: {
+        src: 'docs/_pug/customizer-nav.pug',
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
         dest: 'docs/_includes/nav/customize.html'
       }
     },
@@ -348,7 +414,11 @@ module.exports = function (grunt) {
       options: {
         ignore: [
           'Attribute "autocomplete" not allowed on element "button" at this point.',
+<<<<<<< HEAD
           'Attribute "autocomplete" not allowed on element "input" at this point.',
+=======
+          'Attribute "autocomplete" is only allowed when the input type is "color", "date", "datetime", "datetime-local", "email", "hidden", "month", "number", "password", "range", "search", "tel", "text", "time", "url", or "week".',
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
           'Element "img" is missing required attribute "src".'
         ]
       },
@@ -370,6 +440,7 @@ module.exports = function (grunt) {
       }
     },
 
+<<<<<<< HEAD
     sed: {
       versionNumber: {
         pattern: (function () {
@@ -389,6 +460,8 @@ module.exports = function (grunt) {
       }
     },
 
+=======
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     'saucelabs-qunit': {
       all: {
         options: {
@@ -483,16 +556,23 @@ module.exports = function (grunt) {
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
 
+<<<<<<< HEAD
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
   // This can be overzealous, so its changes should always be manually reviewed!
   grunt.registerTask('change-version-number', 'sed');
 
+=======
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   grunt.registerTask('build-glyphicons-data', function () { generateGlyphiconsData.call(this, grunt); });
 
   // task for building customizer
   grunt.registerTask('build-customizer', ['build-customizer-html', 'build-raw-files']);
+<<<<<<< HEAD
   grunt.registerTask('build-customizer-html', 'jade');
+=======
+  grunt.registerTask('build-customizer-html', 'pug');
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   grunt.registerTask('build-raw-files', 'Add scripts/less files to customizer.', function () {
     var banner = grunt.template.process('<%= banner %>');
     generateRawFiles(grunt, banner);
@@ -510,6 +590,7 @@ module.exports = function (grunt) {
   grunt.registerTask('docs-js', ['uglify:docsJs', 'uglify:customize']);
   grunt.registerTask('lint-docs-js', ['jshint:assets', 'jscs:assets']);
   grunt.registerTask('docs', ['docs-css', 'lint-docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'build-glyphicons-data', 'build-customizer']);
+<<<<<<< HEAD
 
   grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github', 'htmlmin', 'compress']);
 
@@ -528,4 +609,9 @@ module.exports = function (grunt) {
       done();
     });
   });
+=======
+  grunt.registerTask('docs-github', ['jekyll:github', 'htmlmin']);
+
+  grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 };

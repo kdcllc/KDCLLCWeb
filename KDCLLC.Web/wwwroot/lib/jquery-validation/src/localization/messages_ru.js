@@ -2,7 +2,11 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: RU (Russian; русский язык)
  */
+<<<<<<< HEAD
 $.extend($.validator.messages, {
+=======
+$.extend( $.validator.messages, {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Это поле необходимо заполнить.",
 	remote: "Пожалуйста, введите правильное значение.",
 	email: "Пожалуйста, введите корректный адрес электронной почты.",
@@ -14,6 +18,7 @@ $.extend($.validator.messages, {
 	creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
 	equalTo: "Пожалуйста, введите такое же значение ещё раз.",
 	extension: "Пожалуйста, выберите файл с правильным расширением.",
+<<<<<<< HEAD
 	maxlength: $.validator.format("Пожалуйста, введите не больше {0} символов."),
 	minlength: $.validator.format("Пожалуйста, введите не меньше {0} символов."),
 	rangelength: $.validator.format("Пожалуйста, введите значение длиной от {0} до {1} символов."),
@@ -21,3 +26,12 @@ $.extend($.validator.messages, {
 	max: $.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
 	min: $.validator.format("Пожалуйста, введите число, большее или равное {0}.")
 });
+=======
+	maxlength: $.validator.format( "Пожалуйста, введите не больше {0} символов." ),
+	minlength: $.validator.format( "Пожалуйста, введите не меньше {0} символов." ),
+	rangelength: $.validator.format( "Пожалуйста, введите значение длиной от {0} до {1} символов." ),
+	range: $.validator.format( "Пожалуйста, введите число от {0} до {1}." ),
+	max: $.validator.format( "Пожалуйста, введите число, меньшее или равное {0}." ),
+	min: $.validator.format( "Пожалуйста, введите число, большее или равное {0}." )
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

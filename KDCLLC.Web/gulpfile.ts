@@ -1,7 +1,7 @@
 ﻿import * as gulp from 'gulp';
-import {ENV} from './tools/config';
-import {argv, ICommandLineArgs} from './tools/utils/yargs';
-import {runSequence, task} from './tools/utils/tasks';
+import { ENV } from './tools/config';
+import { argv, ICommandLineArgs } from './tools/utils/yargs';
+import { runSequence, task } from './tools/utils/tasks';
 
 gulp.task('default', done => {
     let args: ICommandLineArgs = argv.argv;

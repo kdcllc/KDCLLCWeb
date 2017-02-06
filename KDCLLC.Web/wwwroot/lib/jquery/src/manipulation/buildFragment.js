@@ -1,5 +1,6 @@
 define( [
 	"../core",
+<<<<<<< HEAD
 	"./var/rtagName",
 	"./var/rscriptType",
 	"./wrapMap",
@@ -15,6 +16,39 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 		nodes = [],
 		i = 0,
 		l = elems.length;
+=======
+	"./var/rcheckableType",
+	"./var/rtagName",
+	"./var/rscriptType",
+	"./var/rleadingWhitespace",
+	"./createSafeFragment",
+	"./wrapMap",
+	"./getAll",
+	"./setGlobalEval",
+	"./support"
+], function( jQuery, rcheckableType, rtagName, rscriptType, rleadingWhitespace,
+	createSafeFragment, wrapMap, getAll, setGlobalEval, support ) {
+
+var rhtml = /<|&#?\w+;/,
+	rtbody = /<tbody/i;
+
+function fixDefaultChecked( elem ) {
+	if ( rcheckableType.test( elem.type ) ) {
+		elem.defaultChecked = elem.checked;
+	}
+}
+
+function buildFragment( elems, context, scripts, selection, ignored ) {
+	var j, elem, contains,
+		tmp, tag, tbody, wrap,
+		l = elems.length,
+
+		// Ensure a safe fragment
+		safe = createSafeFragment( context ),
+
+		nodes = [],
+		i = 0;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 	for ( ; i < l; i++ ) {
 		elem = elems[ i ];
@@ -23,9 +57,12 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 
 			// Add nodes directly
 			if ( jQuery.type( elem ) === "object" ) {
+<<<<<<< HEAD
 
 				// Support: Android<4.1, PhantomJS<2
 				// push.apply(_, arraylike) throws on ancient WebKit
+=======
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				jQuery.merge( nodes, elem.nodeType ? [ elem ] : elem );
 
 			// Convert non-html into a text node
@@ -34,11 +71,19 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 
 			// Convert html into DOM nodes
 			} else {
+<<<<<<< HEAD
 				tmp = tmp || fragment.appendChild( context.createElement( "div" ) );
+=======
+				tmp = tmp || safe.appendChild( context.createElement( "div" ) );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 				// Deserialize a standard representation
 				tag = ( rtagName.exec( elem ) || [ "", "" ] )[ 1 ].toLowerCase();
 				wrap = wrapMap[ tag ] || wrapMap._default;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				tmp.innerHTML = wrap[ 1 ] + jQuery.htmlPrefilter( elem ) + wrap[ 2 ];
 
 				// Descend through wrappers to the right content
@@ -47,6 +92,7 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 					tmp = tmp.lastChild;
 				}
 
+<<<<<<< HEAD
 				// Support: Android<4.1, PhantomJS<2
 				// push.apply(_, arraylike) throws on ancient WebKit
 				jQuery.merge( nodes, tmp.childNodes );
@@ -56,12 +102,66 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 
 				// Ensure the created nodes are orphaned (#12392)
 				tmp.textContent = "";
+=======
+				// Manually add leading whitespace removed by IE
+				if ( !support.leadingWhitespace && rleadingWhitespace.test( elem ) ) {
+					nodes.push( context.createTextNode( rleadingWhitespace.exec( elem )[ 0 ] ) );
+				}
+
+				// Remove IE's autoinserted <tbody> from table fragments
+				if ( !support.tbody ) {
+
+					// String was a <table>, *may* have spurious <tbody>
+					elem = tag === "table" && !rtbody.test( elem ) ?
+						tmp.firstChild :
+
+						// String was a bare <thead> or <tfoot>
+						wrap[ 1 ] === "<table>" && !rtbody.test( elem ) ?
+							tmp :
+							0;
+
+					j = elem && elem.childNodes.length;
+					while ( j-- ) {
+						if ( jQuery.nodeName( ( tbody = elem.childNodes[ j ] ), "tbody" ) &&
+							!tbody.childNodes.length ) {
+
+							elem.removeChild( tbody );
+						}
+					}
+				}
+
+				jQuery.merge( nodes, tmp.childNodes );
+
+				// Fix #12392 for WebKit and IE > 9
+				tmp.textContent = "";
+
+				// Fix #12392 for oldIE
+				while ( tmp.firstChild ) {
+					tmp.removeChild( tmp.firstChild );
+				}
+
+				// Remember the top-level container for proper cleanup
+				tmp = safe.lastChild;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			}
 		}
 	}
 
+<<<<<<< HEAD
 	// Remove wrapper from fragment
 	fragment.textContent = "";
+=======
+	// Fix #11356: Clear elements from fragment
+	if ( tmp ) {
+		safe.removeChild( tmp );
+	}
+
+	// Reset defaultChecked for any radios and checkboxes
+	// about to be appended to the DOM in IE 6/7 (#8060)
+	if ( !support.appendChecked ) {
+		jQuery.grep( getAll( nodes, "input" ), fixDefaultChecked );
+	}
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 	i = 0;
 	while ( ( elem = nodes[ i++ ] ) ) {
@@ -71,13 +171,21 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 			if ( ignored ) {
 				ignored.push( elem );
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			continue;
 		}
 
 		contains = jQuery.contains( elem.ownerDocument, elem );
 
 		// Append to fragment
+<<<<<<< HEAD
 		tmp = getAll( fragment.appendChild( elem ), "script" );
+=======
+		tmp = getAll( safe.appendChild( elem ), "script" );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 		// Preserve script evaluation history
 		if ( contains ) {
@@ -95,7 +203,13 @@ function buildFragment( elems, context, scripts, selection, ignored ) {
 		}
 	}
 
+<<<<<<< HEAD
 	return fragment;
+=======
+	tmp = null;
+
+	return safe;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 }
 
 return buildFragment;

@@ -1,6 +1,7 @@
 /**
  * IBAN is the international bank account number.
  * It has a country - specific format, that is checked here too
+<<<<<<< HEAD
  */
 $.validator.addMethod("iban", function(value, element) {
 	// some quick simple tests to prevent needless work
@@ -10,14 +11,43 @@ $.validator.addMethod("iban", function(value, element) {
 
 	// remove spaces and to upper case
 	var iban = value.replace(/ /g, "").toUpperCase(),
+=======
+ *
+ * Validation is case-insensitive. Please make sure to normalize input yourself.
+ */
+$.validator.addMethod( "iban", function( value, element ) {
+
+	// Some quick simple tests to prevent needless work
+	if ( this.optional( element ) ) {
+		return true;
+	}
+
+	// Remove spaces and to upper case
+	var iban = value.replace( / /g, "" ).toUpperCase(),
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		ibancheckdigits = "",
 		leadingZeroes = true,
 		cRest = "",
 		cOperator = "",
 		countrycode, ibancheck, charAt, cChar, bbanpattern, bbancountrypatterns, ibanregexp, i, p;
 
+<<<<<<< HEAD
 	// check the country code and find the country specific format
 	countrycode = iban.substring(0, 2);
+=======
+	// Check for IBAN code length.
+	// It contains:
+	// country code ISO 3166-1 - two letters,
+	// two check digits,
+	// Basic Bank Account Number (BBAN) - up to 30 chars
+	var minimalIBANlength = 5;
+	if ( iban.length < minimalIBANlength ) {
+		return false;
+	}
+
+	// Check the country code and find the country specific format
+	countrycode = iban.substring( 0, 2 );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	bbancountrypatterns = {
 		"AL": "\\d{8}[\\dA-Z]{16}",
 		"AD": "\\d{8}[\\dA-Z]{12}",
@@ -85,7 +115,12 @@ $.validator.addMethod("iban", function(value, element) {
 		"VG": "[\\dA-Z]{4}\\d{16}"
 	};
 
+<<<<<<< HEAD
 	bbanpattern = bbancountrypatterns[countrycode];
+=======
+	bbanpattern = bbancountrypatterns[ countrycode ];
+
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	// As new countries will start using IBAN in the
 	// future, we only check if the countrycode is known.
 	// This prevents false negatives, while almost all
@@ -93,6 +128,7 @@ $.validator.addMethod("iban", function(value, element) {
 	// by the checksum validation below anyway.
 	// Strict checking should return FALSE for unknown
 	// countries.
+<<<<<<< HEAD
 	if (typeof bbanpattern !== "undefined") {
 		ibanregexp = new RegExp("^[A-Z]{2}\\d{2}" + bbanpattern + "$", "");
 		if (!(ibanregexp.test(iban))) {
@@ -115,8 +151,36 @@ $.validator.addMethod("iban", function(value, element) {
 	// calculate the result of: ibancheckdigits % 97
 	for (p = 0; p < ibancheckdigits.length; p++) {
 		cChar = ibancheckdigits.charAt(p);
+=======
+	if ( typeof bbanpattern !== "undefined" ) {
+		ibanregexp = new RegExp( "^[A-Z]{2}\\d{2}" + bbanpattern + "$", "" );
+		if ( !( ibanregexp.test( iban ) ) ) {
+			return false; // Invalid country specific format
+		}
+	}
+
+	// Now check the checksum, first convert to digits
+	ibancheck = iban.substring( 4, iban.length ) + iban.substring( 0, 4 );
+	for ( i = 0; i < ibancheck.length; i++ ) {
+		charAt = ibancheck.charAt( i );
+		if ( charAt !== "0" ) {
+			leadingZeroes = false;
+		}
+		if ( !leadingZeroes ) {
+			ibancheckdigits += "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf( charAt );
+		}
+	}
+
+	// Calculate the result of: ibancheckdigits % 97
+	for ( p = 0; p < ibancheckdigits.length; p++ ) {
+		cChar = ibancheckdigits.charAt( p );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		cOperator = "" + cRest + "" + cChar;
 		cRest = cOperator % 97;
 	}
 	return cRest === 1;
+<<<<<<< HEAD
 }, "Please specify a valid IBAN");
+=======
+}, "Please specify a valid IBAN" );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

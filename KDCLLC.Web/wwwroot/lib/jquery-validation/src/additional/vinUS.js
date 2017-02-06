@@ -10,8 +10,13 @@
  * @type Boolean
  * @cat Plugins/Validate/Methods
  */
+<<<<<<< HEAD
 $.validator.addMethod("vinUS", function(v) {
 	if (v.length !== 17) {
+=======
+$.validator.addMethod( "vinUS", function( v ) {
+	if ( v.length !== 17 ) {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		return false;
 	}
 
@@ -21,6 +26,7 @@ $.validator.addMethod("vinUS", function(v) {
 		rs = 0,
 		i, n, d, f, cd, cdv;
 
+<<<<<<< HEAD
 	for (i = 0; i < 17; i++) {
 		f = FL[i];
 		d = v.slice(i, i + 1);
@@ -36,6 +42,23 @@ $.validator.addMethod("vinUS", function(v) {
 					d *= f;
 					if (isNaN(cdv) && n === 8) {
 						cdv = LL[n];
+=======
+	for ( i = 0; i < 17; i++ ) {
+		f = FL[ i ];
+		d = v.slice( i, i + 1 );
+		if ( i === 8 ) {
+			cdv = d;
+		}
+		if ( !isNaN( d ) ) {
+			d *= f;
+		} else {
+			for ( n = 0; n < LL.length; n++ ) {
+				if ( d.toUpperCase() === LL[ n ] ) {
+					d = VL[ n ];
+					d *= f;
+					if ( isNaN( cdv ) && n === 8 ) {
+						cdv = LL[ n ];
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 					}
 					break;
 				}
@@ -44,6 +67,7 @@ $.validator.addMethod("vinUS", function(v) {
 		rs += d;
 	}
 	cd = rs % 11;
+<<<<<<< HEAD
 	if (cd === 10) {
 		cd = "X";
 	}
@@ -52,3 +76,13 @@ $.validator.addMethod("vinUS", function(v) {
 	}
 	return false;
 }, "The specified vehicle identification number (VIN) is invalid.");
+=======
+	if ( cd === 10 ) {
+		cd = "X";
+	}
+	if ( cd === cdv ) {
+		return true;
+	}
+	return false;
+}, "The specified vehicle identification number (VIN) is invalid." );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

@@ -14,7 +14,11 @@
     "tag": "1.4.2",
     "commit": "3eda118b4440825df56e3c12d054f9d316a5987a"
   },
+<<<<<<< HEAD
   "_source": "git://github.com/scottjehl/Respond.git",
+=======
+  "_source": "https://github.com/scottjehl/Respond.git",
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   "_target": "*",
   "_originalSource": "respond"
 }

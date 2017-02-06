@@ -2,7 +2,11 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: ID (Indonesia; Indonesian)
  */
+<<<<<<< HEAD
 $.extend($.validator.messages, {
+=======
+$.extend( $.validator.messages, {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Kolom ini diperlukan.",
 	remote: "Harap benarkan kolom ini.",
 	email: "Silakan masukkan format email yang benar.",
@@ -13,6 +17,7 @@ $.extend($.validator.messages, {
 	digits: "Harap masukan angka saja.",
 	creditcard: "Harap masukkan format kartu kredit yang benar.",
 	equalTo: "Harap masukkan nilai yg sama dengan sebelumnya.",
+<<<<<<< HEAD
 	maxlength: $.validator.format("Input dibatasi hanya {0} karakter."),
 	minlength: $.validator.format("Input tidak kurang dari {0} karakter."),
 	rangelength: $.validator.format("Panjang karakter yg diizinkan antara {0} dan {1} karakter."),
@@ -20,3 +25,12 @@ $.extend($.validator.messages, {
 	max: $.validator.format("Harap masukkan nilai lebih kecil atau sama dengan {0}."),
 	min: $.validator.format("Harap masukkan nilai lebih besar atau sama dengan {0}.")
 });
+=======
+	maxlength: $.validator.format( "Input dibatasi hanya {0} karakter." ),
+	minlength: $.validator.format( "Input tidak kurang dari {0} karakter." ),
+	rangelength: $.validator.format( "Panjang karakter yg diizinkan antara {0} dan {1} karakter." ),
+	range: $.validator.format( "Harap masukkan nilai antara {0} dan {1}." ),
+	max: $.validator.format( "Harap masukkan nilai lebih kecil atau sama dengan {0}." ),
+	min: $.validator.format( "Harap masukkan nilai lebih besar atau sama dengan {0}." )
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

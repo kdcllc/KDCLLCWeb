@@ -5,7 +5,12 @@ function makeWithIfBinding(bindingKey, isWith, isNot, makeContextCallback) {
             var didDisplayOnLastUpdate,
                 savedNodes;
             ko.computed(function() {
+<<<<<<< HEAD
                 var dataValue = ko.utils.unwrapObservable(valueAccessor()),
+=======
+                var rawValue = valueAccessor(),
+                    dataValue = ko.utils.unwrapObservable(rawValue),
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
                     shouldDisplay = !isNot !== !dataValue, // equivalent to isNot ? !dataValue : !!dataValue
                     isFirstRender = !savedNodes,
                     needsRefresh = isFirstRender || isWith || (shouldDisplay !== didDisplayOnLastUpdate);
@@ -20,7 +25,11 @@ function makeWithIfBinding(bindingKey, isWith, isNot, makeContextCallback) {
                         if (!isFirstRender) {
                             ko.virtualElements.setDomNodeChildren(element, ko.utils.cloneNodes(savedNodes));
                         }
+<<<<<<< HEAD
                         ko.applyBindingsToDescendants(makeContextCallback ? makeContextCallback(bindingContext, dataValue) : bindingContext, element);
+=======
+                        ko.applyBindingsToDescendants(makeContextCallback ? makeContextCallback(bindingContext, rawValue) : bindingContext, element);
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
                     } else {
                         ko.virtualElements.emptyNode(element);
                     }
@@ -40,6 +49,10 @@ makeWithIfBinding('if');
 makeWithIfBinding('ifnot', false /* isWith */, true /* isNot */);
 makeWithIfBinding('with', true /* isWith */, false /* isNot */,
     function(bindingContext, dataValue) {
+<<<<<<< HEAD
         return bindingContext['createChildContext'](dataValue);
+=======
+        return bindingContext.createStaticChildContext(dataValue);
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     }
 );

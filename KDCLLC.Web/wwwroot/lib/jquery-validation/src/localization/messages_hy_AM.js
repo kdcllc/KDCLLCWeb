@@ -2,7 +2,11 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: HY_AM (Armenian; հայերեն լեզու)
  */
+<<<<<<< HEAD
 $.extend($.validator.messages, {
+=======
+$.extend( $.validator.messages, {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Պարտադիր լրացման դաշտ",
 	remote: "Ներմուծեք ճիշտ արժեքը",
 	email: "Ներմուծեք վավեր էլեկտրոնային փոստի հասցե",
@@ -14,6 +18,7 @@ $.extend($.validator.messages, {
 	creditcard: "Ներմուծեք ճիշտ բանկային քարտի համար",
 	equalTo: "Ներմուծեք միևնուն արժեքը ևս մեկ անգամ",
 	extension: "Ընտրեք ճիշտ ընդլանումով ֆայլ",
+<<<<<<< HEAD
 	maxlength: $.validator.format("Ներմուծեք ոչ ավել քան {0} նիշ"),
 	minlength: $.validator.format("Ներմուծեք ոչ պակաս քան {0} նիշ"),
 	rangelength: $.validator.format("Ներմուծեք {0}֊ից {1} երկարությամբ արժեք"),
@@ -21,3 +26,12 @@ $.extend($.validator.messages, {
 	max: $.validator.format("Ներմուծեք թիվ, որը փոքր կամ հավասար է {0}֊ին"),
 	min: $.validator.format("Ներմուծեք թիվ, որը մեծ կամ հավասար է {0}֊ին")
 });
+=======
+	maxlength: $.validator.format( "Ներմուծեք ոչ ավել քան {0} նիշ" ),
+	minlength: $.validator.format( "Ներմուծեք ոչ պակաս քան {0} նիշ" ),
+	rangelength: $.validator.format( "Ներմուծեք {0}֊ից {1} երկարությամբ արժեք" ),
+	range: $.validator.format( "Ներմուծեք թիվ {0}֊ից {1} միջակայքում" ),
+	max: $.validator.format( "Ներմուծեք թիվ, որը փոքր կամ հավասար է {0}֊ին" ),
+	min: $.validator.format( "Ներմուծեք թիվ, որը մեծ կամ հավասար է {0}֊ին" )
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

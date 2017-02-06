@@ -1,10 +1,27 @@
 /* Release checklist
 - Run `git changelog` and edit to match previous output (this should make use of jquey-release instead)
 - pull latest https://github.com/jquery/jquery-release
+<<<<<<< HEAD
 - run
 	node release.js --remote=jzaefferer/jquery-validation
 - Wait a while, verify and confirm each step
 -
+=======
+- disable _generateChangelog task in release.js (BOOOO)
+- run
+	node release.js --remote=jzaefferer/jquery-validation
+- Wait a while, verify and confirm each step
+- Create GitHub release: Pick the new tag, add changelog, upload zip
+- Upload to NPM
+    git fetch --tags jzaefferer
+    git checkout tags/X.YY.Z
+    npm publish
+- Update MS CDN (Ping Chris Sfanos)
+- Check jsdelivr CDN: new git tags are automatically pulled, tested & merged via https://github.com/jsdelivr/jsdelivr/pulls
+- Check cdnjs CDN: new git tags are automatically committed into https://github.com/cdnjs/cdnjs/commits/master
+- Update validation-content/pages/index.html (may have to hold off on CDN updates until available)
+- Write blog post: Some highlights, changelog, download links
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 */
 
 /*jshint node:true */
@@ -33,8 +50,13 @@ Release.define({
 		]);
 	},
 
+<<<<<<< HEAD
 	// disable CDN publishing
 	cdnPublish: false,
+=======
+	cdnPublish: false,
+	npmPublish: true,
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 	// disable authors check
 	_checkAuthorsTxt: function() {}

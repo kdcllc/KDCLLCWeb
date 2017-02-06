@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * matches US phone number format
+=======
+ * Matches US phone number format
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
  *
  * where the area code may not start with 1 and the prefix may not start with 1
  * allows '-' or ' ' as a separator and allows parens around area code
@@ -14,8 +18,16 @@
  * and not
  * 212 123 4567
  */
+<<<<<<< HEAD
 $.validator.addMethod("phoneUS", function(phone_number, element) {
 	phone_number = phone_number.replace(/\s+/g, "");
 	return this.optional(element) || phone_number.length > 9 &&
 		phone_number.match(/^(\+?1-?)?(\([2-9]([02-9]\d|1[02-9])\)|[2-9]([02-9]\d|1[02-9]))-?[2-9]([02-9]\d|1[02-9])-?\d{4}$/);
 }, "Please specify a valid phone number");
+=======
+$.validator.addMethod( "phoneUS", function( phone_number, element ) {
+	phone_number = phone_number.replace( /\s+/g, "" );
+	return this.optional( element ) || phone_number.length > 9 &&
+		phone_number.match( /^(\+?1-?)?(\([2-9]([02-9]\d|1[02-9])\)|[2-9]([02-9]\d|1[02-9]))-?[2-9]([02-9]\d|1[02-9])-?\d{4}$/ );
+}, "Please specify a valid phone number" );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

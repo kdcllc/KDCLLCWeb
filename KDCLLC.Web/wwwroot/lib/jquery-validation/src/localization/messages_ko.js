@@ -2,7 +2,11 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: KO (Korean; 한국어)
  */
+<<<<<<< HEAD
 $.extend($.validator.messages, {
+=======
+$.extend( $.validator.messages, {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "필수 항목입니다.",
 	remote: "항목을 수정하세요.",
 	email: "유효하지 않은 E-Mail주소입니다.",
@@ -14,6 +18,7 @@ $.extend($.validator.messages, {
 	creditcard: "신용카드 번호가 바르지 않습니다.",
 	equalTo: "같은 값을 다시 입력하세요.",
 	extension: "올바른 확장자가 아닙니다.",
+<<<<<<< HEAD
 	maxlength: $.validator.format("{0}자를 넘을 수 없습니다. "),
 	minlength: $.validator.format("{0}자 이상 입력하세요."),
 	rangelength: $.validator.format("문자 길이가 {0} 에서 {1} 사이의 값을 입력하세요."),
@@ -21,3 +26,12 @@ $.extend($.validator.messages, {
 	max: $.validator.format("{0} 이하의 값을 입력하세요."),
 	min: $.validator.format("{0} 이상의 값을 입력하세요.")
 });
+=======
+	maxlength: $.validator.format( "{0}자를 넘을 수 없습니다. " ),
+	minlength: $.validator.format( "{0}자 이상 입력하세요." ),
+	rangelength: $.validator.format( "문자 길이가 {0} 에서 {1} 사이의 값을 입력하세요." ),
+	range: $.validator.format( "{0} 에서 {1} 사이의 값을 입력하세요." ),
+	max: $.validator.format( "{0} 이하의 값을 입력하세요." ),
+	min: $.validator.format( "{0} 이상의 값을 입력하세요." )
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

@@ -2,7 +2,11 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: HE (Hebrew; עברית)
  */
+<<<<<<< HEAD
 $.extend($.validator.messages, {
+=======
+$.extend( $.validator.messages, {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "השדה הזה הינו שדה חובה",
 	remote: "נא לתקן שדה זה",
 	email: "נא למלא כתובת דוא\"ל חוקית",
@@ -14,6 +18,7 @@ $.extend($.validator.messages, {
 	creditcard: "נא למלא מספר כרטיס אשראי חוקי",
 	equalTo: "נא למלא את אותו ערך שוב",
 	extension: "נא למלא ערך עם סיומת חוקית",
+<<<<<<< HEAD
 	maxlength: $.validator.format(".נא לא למלא יותר מ- {0} תווים"),
 	minlength: $.validator.format("נא למלא לפחות {0} תווים"),
 	rangelength: $.validator.format("נא למלא ערך בין {0} ל- {1} תווים"),
@@ -21,3 +26,12 @@ $.extend($.validator.messages, {
 	max: $.validator.format("נא למלא ערך קטן או שווה ל- {0}"),
 	min: $.validator.format("נא למלא ערך גדול או שווה ל- {0}")
 });
+=======
+	maxlength: $.validator.format( ".נא לא למלא יותר מ- {0} תווים" ),
+	minlength: $.validator.format( "נא למלא לפחות {0} תווים" ),
+	rangelength: $.validator.format( "נא למלא ערך בין {0} ל- {1} תווים" ),
+	range: $.validator.format( "נא למלא ערך בין {0} ל- {1}" ),
+	max: $.validator.format( "נא למלא ערך קטן או שווה ל- {0}" ),
+	min: $.validator.format( "נא למלא ערך גדול או שווה ל- {0}" )
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

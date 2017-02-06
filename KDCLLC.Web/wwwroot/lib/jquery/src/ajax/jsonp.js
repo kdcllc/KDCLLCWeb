@@ -53,7 +53,11 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 			return responseContainer[ 0 ];
 		};
 
+<<<<<<< HEAD
 		// Force json dataType
+=======
+		// force json dataType
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		s.dataTypes[ 0 ] = "json";
 
 		// Install callback
@@ -77,10 +81,17 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 			// Save back as free
 			if ( s[ callbackName ] ) {
 
+<<<<<<< HEAD
 				// Make sure that re-using the options doesn't screw things around
 				s.jsonpCallback = originalSettings.jsonpCallback;
 
 				// Save the callback name for future use
+=======
+				// make sure that re-using the options doesn't screw things around
+				s.jsonpCallback = originalSettings.jsonpCallback;
+
+				// save the callback name for future use
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 				oldCallbacks.push( callbackName );
 			}
 

@@ -1,6 +1,6 @@
 "use strict";
 var path_1 = require('path');
-var config_1 = require('../../tools/config');
+var config_1 = require('../config');
 module.exports = function buildDocs(gulp, plugins, options) {
     return function () {
         var src = [

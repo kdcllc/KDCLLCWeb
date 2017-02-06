@@ -2,7 +2,11 @@
 	"name": "jquery-validation",
 	"title": "jQuery Validation Plugin",
 	"description": "Client-side form validation made easy",
+<<<<<<< HEAD
 	"version": "1.14.0",
+=======
+	"version": "1.16.0",
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	"homepage": "http://jqueryvalidation.org/",
 	"license": "MIT",
 	"author": {
@@ -30,6 +34,7 @@
 	"files": [
 		"dist/localization/",
 		"dist/additional-methods.js",
+<<<<<<< HEAD
 		"dist/jquery.validate.js"
 	],
 	"main": "dist/jquery.validate.js",
@@ -46,6 +51,28 @@
 		"grunt-contrib-watch": "0.6.0",
 		"grunt-jscs": "1.0.0",
 		"grunt-text-replace": "0.3.11"
+=======
+		"dist/jquery.validate.js",
+		"dist/jquery.validate.min.js"
+	],
+	"main": "dist/jquery.validate.js",
+	"dependencies": {
+		"jquery": "^1.7 || ^2.0 || ^3.1"
+	},
+	"devDependencies": {
+		"commitplease": "2.3.1",
+		"grunt": "1.0.1",
+		"grunt-contrib-compress": "1.2.0",
+		"grunt-contrib-concat": "1.0.1",
+		"grunt-contrib-copy": "1.0.0",
+		"grunt-contrib-jshint": "1.0.0",
+		"grunt-contrib-qunit": "1.2.0",
+		"grunt-contrib-uglify": "1.0.1",
+		"grunt-contrib-watch": "1.0.0",
+		"grunt-jscs": "2.8.0",
+		"grunt-text-replace": "0.4.0",
+		"qunitjs": "2.0.0"
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	},
 	"keywords": [
 		"jquery",

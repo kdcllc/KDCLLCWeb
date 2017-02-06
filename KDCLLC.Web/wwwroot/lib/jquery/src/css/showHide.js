@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 define( [
 	"../data/var/dataPriv"
 ], function( dataPriv ) {
 
+=======
+define( [], function() {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 function showHide( elements, show ) {
 	var display, elem,
 		values = [],
@@ -20,14 +24,22 @@ function showHide( elements, show ) {
 			if ( display === "none" ) {
 
 				// Restore a pre-hide() value if we have one
+<<<<<<< HEAD
 				values[ index ] = dataPriv.get( elem, "display" ) || "";
+=======
+				values[ index ] = jQuery._data( elem, "display" ) || "";
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			}
 		} else {
 			if ( display !== "none" ) {
 				values[ index ] = "none";
 
 				// Remember the value we're replacing
+<<<<<<< HEAD
 				dataPriv.set( elem, "display", display );
+=======
+				jQuery._data( elem, "display", display );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			}
 		}
 	}

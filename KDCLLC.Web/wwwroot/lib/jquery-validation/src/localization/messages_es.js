@@ -2,7 +2,11 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: ES (Spanish; Español)
  */
+<<<<<<< HEAD
 $.extend($.validator.messages, {
+=======
+$.extend( $.validator.messages, {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Este campo es obligatorio.",
 	remote: "Por favor, rellena este campo.",
 	email: "Por favor, escribe una dirección de correo válida.",
@@ -14,6 +18,7 @@ $.extend($.validator.messages, {
 	creditcard: "Por favor, escribe un número de tarjeta válido.",
 	equalTo: "Por favor, escribe el mismo valor de nuevo.",
 	extension: "Por favor, escribe un valor con una extensión aceptada.",
+<<<<<<< HEAD
 	maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
 	minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
 	rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
@@ -24,3 +29,15 @@ $.extend($.validator.messages, {
 	nieES: "Por favor, escribe un NIE válido.",
 	cifES: "Por favor, escribe un CIF válido."
 });
+=======
+	maxlength: $.validator.format( "Por favor, no escribas más de {0} caracteres." ),
+	minlength: $.validator.format( "Por favor, no escribas menos de {0} caracteres." ),
+	rangelength: $.validator.format( "Por favor, escribe un valor entre {0} y {1} caracteres." ),
+	range: $.validator.format( "Por favor, escribe un valor entre {0} y {1}." ),
+	max: $.validator.format( "Por favor, escribe un valor menor o igual a {0}." ),
+	min: $.validator.format( "Por favor, escribe un valor mayor o igual a {0}." ),
+	nifES: "Por favor, escribe un NIF válido.",
+	nieES: "Por favor, escribe un NIE válido.",
+	cifES: "Por favor, escribe un CIF válido."
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

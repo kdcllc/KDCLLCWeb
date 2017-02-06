@@ -10,6 +10,10 @@
 	"undef": true,
 	"unused": true,
 
+<<<<<<< HEAD
+=======
+	"evil": true,
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	"sub": true,
 
 	// Support: IE < 10, Android < 4.1
@@ -22,8 +26,13 @@
 		"JSON": false,
 
 		"jQuery": true,
+<<<<<<< HEAD
 		"define": true,
 		"module": true,
+=======
+		"define": false,
+		"module": false,
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		"noGlobal": true
 	}
 }

@@ -1,7 +1,11 @@
 {
   "name": "bootstrap",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+<<<<<<< HEAD
   "version": "3.3.5",
+=======
+  "version": "3.3.7",
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   "keywords": [
     "css",
     "less",
@@ -14,6 +18,11 @@
   "homepage": "http://getbootstrap.com",
   "author": "Twitter, Inc.",
   "scripts": {
+<<<<<<< HEAD
+=======
+    "change-version": "node grunt/change-version.js",
+    "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     "test": "grunt test"
   },
   "style": "dist/css/bootstrap.css",
@@ -29,6 +38,7 @@
   "license": "MIT",
   "devDependencies": {
     "btoa": "~1.1.2",
+<<<<<<< HEAD
     "glob": "~5.0.5",
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "~3.0.0",
@@ -57,6 +67,36 @@
     "markdown-it": "^4.2.1",
     "npm-shrinkwrap": "^200.4.0",
     "time-grunt": "^1.2.0"
+=======
+    "glob": "~7.0.3",
+    "grunt": "~1.0.1",
+    "grunt-autoprefixer": "~3.0.4",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-compress": "~1.3.0",
+    "grunt-contrib-concat": "~1.0.0",
+    "grunt-contrib-connect": "~1.0.0",
+    "grunt-contrib-copy": "~1.0.0",
+    "grunt-contrib-csslint": "~1.0.0",
+    "grunt-contrib-cssmin": "~1.0.0",
+    "grunt-contrib-htmlmin": "~1.5.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-less": "~1.3.0",
+    "grunt-contrib-pug": "~1.0.0",
+    "grunt-contrib-qunit": "~0.7.0",
+    "grunt-contrib-uglify": "~1.0.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-csscomb": "~3.1.0",
+    "grunt-exec": "~1.0.0",
+    "grunt-html": "~8.0.1",
+    "grunt-jekyll": "~0.4.4",
+    "grunt-jscs": "~3.0.1",
+    "grunt-saucelabs": "~9.0.0",
+    "load-grunt-tasks": "~3.5.0",
+    "markdown-it": "^7.0.0",
+    "shelljs": "^0.7.0",
+    "shx": "^0.1.2",
+    "time-grunt": "^1.3.0"
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   },
   "engines": {
     "node": ">=0.10.1"

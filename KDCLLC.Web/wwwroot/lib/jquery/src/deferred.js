@@ -120,6 +120,10 @@ jQuery.extend( {
 					values[ i ] = arguments.length > 1 ? slice.call( arguments ) : value;
 					if ( values === progressValues ) {
 						deferred.notifyWith( contexts, values );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 					} else if ( !( --remaining ) ) {
 						deferred.resolveWith( contexts, values );
 					}
@@ -128,7 +132,11 @@ jQuery.extend( {
 
 			progressValues, progressContexts, resolveContexts;
 
+<<<<<<< HEAD
 		// Add listeners to Deferred subordinates; treat others as resolved
+=======
+		// add listeners to Deferred subordinates; treat others as resolved
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		if ( length > 1 ) {
 			progressValues = new Array( length );
 			progressContexts = new Array( length );
@@ -145,7 +153,11 @@ jQuery.extend( {
 			}
 		}
 
+<<<<<<< HEAD
 		// If we're not waiting on anything, resolve the master
+=======
+		// if we're not waiting on anything, resolve the master
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 		if ( !remaining ) {
 			deferred.resolveWith( resolveContexts, resolveValues );
 		}

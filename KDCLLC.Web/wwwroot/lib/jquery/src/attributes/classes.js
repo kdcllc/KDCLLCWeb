@@ -1,14 +1,23 @@
 define( [
 	"../core",
 	"../var/rnotwhite",
+<<<<<<< HEAD
 	"../data/var/dataPriv",
 	"../core/init"
 ], function( jQuery, rnotwhite, dataPriv ) {
+=======
+	"../core/init"
+], function( jQuery, rnotwhite ) {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
 var rclass = /[\t\r\n\f]/g;
 
 function getClass( elem ) {
+<<<<<<< HEAD
 	return elem.getAttribute && elem.getAttribute( "class" ) || "";
+=======
+	return jQuery.attr( elem, "class" ) || "";
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 }
 
 jQuery.fn.extend( {
@@ -38,10 +47,17 @@ jQuery.fn.extend( {
 						}
 					}
 
+<<<<<<< HEAD
 					// Only assign if different to avoid unneeded rendering.
 					finalValue = jQuery.trim( cur );
 					if ( curValue !== finalValue ) {
 						elem.setAttribute( "class", finalValue );
+=======
+					// only assign if different to avoid unneeded rendering.
+					finalValue = jQuery.trim( cur );
+					if ( curValue !== finalValue ) {
+						jQuery.attr( elem, "class", finalValue );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 					}
 				}
 			}
@@ -87,7 +103,11 @@ jQuery.fn.extend( {
 					// Only assign if different to avoid unneeded rendering.
 					finalValue = jQuery.trim( cur );
 					if ( curValue !== finalValue ) {
+<<<<<<< HEAD
 						elem.setAttribute( "class", finalValue );
+=======
+						jQuery.attr( elem, "class", finalValue );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 					}
 				}
 			}
@@ -137,6 +157,7 @@ jQuery.fn.extend( {
 				className = getClass( this );
 				if ( className ) {
 
+<<<<<<< HEAD
 					// Store className if set
 					dataPriv.set( this, "__className__", className );
 				}
@@ -152,6 +173,21 @@ jQuery.fn.extend( {
 						dataPriv.get( this, "__className__" ) || ""
 					);
 				}
+=======
+					// store className if set
+					jQuery._data( this, "__className__", className );
+				}
+
+				// If the element has a class name or if we're passed "false",
+				// then remove the whole classname (if there was one, the above saved it).
+				// Otherwise bring back whatever was previously saved (if anything),
+				// falling back to the empty string if nothing was stored.
+				jQuery.attr( this, "class",
+					className || value === false ?
+					"" :
+					jQuery._data( this, "__className__" ) || ""
+				);
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 			}
 		} );
 	},

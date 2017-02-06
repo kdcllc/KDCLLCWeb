@@ -2,7 +2,11 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: LT (Lithuanian; lietuvių kalba)
  */
+<<<<<<< HEAD
 $.extend($.validator.messages, {
+=======
+$.extend( $.validator.messages, {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Šis laukas yra privalomas.",
 	remote: "Prašau pataisyti šį lauką.",
 	email: "Prašau įvesti teisingą elektroninio pašto adresą.",
@@ -14,6 +18,7 @@ $.extend($.validator.messages, {
 	creditcard: "Prašau įvesti teisingą kreditinės kortelės numerį.",
 	equalTo: "Prašau įvestį tą pačią reikšmę dar kartą.",
 	extension: "Prašau įvesti reikšmę su teisingu plėtiniu.",
+<<<<<<< HEAD
 	maxlength: $.validator.format("Prašau įvesti ne daugiau kaip {0} simbolių."),
 	minlength: $.validator.format("Prašau įvesti bent {0} simbolius."),
 	rangelength: $.validator.format("Prašau įvesti reikšmes, kurių ilgis nuo {0} iki {1} simbolių."),
@@ -21,3 +26,12 @@ $.extend($.validator.messages, {
 	max: $.validator.format("Prašau įvesti reikšmę mažesnę arba lygią {0}."),
 	min: $.validator.format("Prašau įvesti reikšmę didesnę arba lygią {0}.")
 });
+=======
+	maxlength: $.validator.format( "Prašau įvesti ne daugiau kaip {0} simbolių." ),
+	minlength: $.validator.format( "Prašau įvesti bent {0} simbolius." ),
+	rangelength: $.validator.format( "Prašau įvesti reikšmes, kurių ilgis nuo {0} iki {1} simbolių." ),
+	range: $.validator.format( "Prašau įvesti reikšmę intervale nuo {0} iki {1}." ),
+	max: $.validator.format( "Prašau įvesti reikšmę mažesnę arba lygią {0}." ),
+	min: $.validator.format( "Prašau įvesti reikšmę didesnę arba lygią {0}." )
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

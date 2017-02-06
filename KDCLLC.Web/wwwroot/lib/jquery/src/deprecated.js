@@ -1,5 +1,10 @@
 define( [
+<<<<<<< HEAD
 	"./core"
+=======
+	"./core",
+	"./traversing"
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 ], function( jQuery ) {
 
 jQuery.fn.extend( {
@@ -20,6 +25,7 @@ jQuery.fn.extend( {
 		return arguments.length === 1 ?
 			this.off( selector, "**" ) :
 			this.off( types, selector || "**", fn );
+<<<<<<< HEAD
 	},
 	size: function() {
 		return this.length;
@@ -30,3 +36,16 @@ jQuery.fn.andSelf = jQuery.fn.addBack;
 
 } );
 
+=======
+	}
+} );
+
+// The number of elements contained in the matched element set
+jQuery.fn.size = function() {
+	return this.length;
+};
+
+jQuery.fn.andSelf = jQuery.fn.addBack;
+
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f

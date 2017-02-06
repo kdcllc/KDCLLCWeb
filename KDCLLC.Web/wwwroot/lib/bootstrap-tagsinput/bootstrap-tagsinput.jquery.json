@@ -1,6 +1,10 @@
 {
   "name": "bootstrap-tagsinput",
+<<<<<<< HEAD
   "version": "0.7.1",
+=======
+  "version": "0.8.0",
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   "title": "Bootstrap Tags Input",
   "author": {
     "name": "Tim Schlechter"

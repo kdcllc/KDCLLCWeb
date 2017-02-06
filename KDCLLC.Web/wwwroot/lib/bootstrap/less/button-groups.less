@@ -59,7 +59,11 @@
     .border-right-radius(0);
   }
 }
+<<<<<<< HEAD
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+=======
+// Need .dropdown-toggle since :last-child doesn't apply, given that a .dropdown-menu is used immediately after it
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 .btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   .border-left-radius(0);
@@ -173,12 +177,21 @@
     border-radius: 0;
   }
   &:first-child:not(:last-child) {
+<<<<<<< HEAD
     border-top-right-radius: @btn-border-radius-base;
     .border-bottom-radius(0);
   }
   &:last-child:not(:first-child) {
     border-bottom-left-radius: @btn-border-radius-base;
     .border-top-radius(0);
+=======
+    .border-top-radius(@btn-border-radius-base);
+    .border-bottom-radius(0);
+  }
+  &:last-child:not(:first-child) {
+    .border-top-radius(0);
+    .border-bottom-radius(@btn-border-radius-base);
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   }
 }
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {

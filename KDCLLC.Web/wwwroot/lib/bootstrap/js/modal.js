@@ -1,8 +1,15 @@
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: modal.js v3.3.5
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
+=======
+ * Bootstrap: modal.js v3.3.7
+ * http://getbootstrap.com/javascript/#modals
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -33,7 +40,11 @@
     }
   }
 
+<<<<<<< HEAD
   Modal.VERSION  = '3.3.5'
+=======
+  Modal.VERSION  = '3.3.7'
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -140,7 +151,13 @@
     $(document)
       .off('focusin.bs.modal') // guard against infinite focus loop
       .on('focusin.bs.modal', $.proxy(function (e) {
+<<<<<<< HEAD
         if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
+=======
+        if (document !== e.target &&
+            this.$element[0] !== e.target &&
+            !this.$element.has(e.target).length) {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
           this.$element.trigger('focus')
         }
       }, this))

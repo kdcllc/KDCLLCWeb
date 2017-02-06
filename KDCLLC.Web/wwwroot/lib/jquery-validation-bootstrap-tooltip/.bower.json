@@ -1,6 +1,10 @@
 {
   "name": "jquery-validation-bootstrap-tooltip",
+<<<<<<< HEAD
   "version": "0.10.1",
+=======
+  "version": "0.10.2",
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   "homepage": "https://github.com/Thrilleratplay/jquery-validation-bootstrap-tooltip",
   "authors": [
     "ThrillerAtPlay <thrilleratplay@gmail.com>"
@@ -30,6 +34,7 @@
     "test",
     "tests"
   ],
+<<<<<<< HEAD
   "_release": "0.10.1",
   "_resolution": {
     "type": "version",
@@ -37,6 +42,15 @@
     "commit": "419f2569fabe3b05ebfd86be6442cc3d23aaeda4"
   },
   "_source": "git://github.com/Thrilleratplay/jquery-validation-bootstrap-tooltip.git",
+=======
+  "_release": "0.10.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.10.2",
+    "commit": "ec534d5373040dd0b0fad8d30b540df468e0849c"
+  },
+  "_source": "https://github.com/Thrilleratplay/jquery-validation-bootstrap-tooltip.git",
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
   "_target": "*",
   "_originalSource": "jquery-validation-bootstrap-tooltip"
 }

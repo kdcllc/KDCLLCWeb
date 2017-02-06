@@ -210,7 +210,12 @@ var computedFn = {
     evaluateImmediate: function (notifyChange) {
         var computedObservable = this,
             state = computedObservable[computedState],
+<<<<<<< HEAD
             disposeWhen = state.disposeWhen;
+=======
+            disposeWhen = state.disposeWhen,
+            changed = false;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
         if (state.isBeingEvaluated) {
             // If the evaluation of a ko.computed causes side effects, it's possible that it will trigger its own re-evaluation.
@@ -238,7 +243,11 @@ var computedFn = {
 
         state.isBeingEvaluated = true;
         try {
+<<<<<<< HEAD
             this.evaluateImmediate_CallReadWithDependencyDetection(notifyChange);
+=======
+            changed = this.evaluateImmediate_CallReadWithDependencyDetection(notifyChange);
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
         } finally {
             state.isBeingEvaluated = false;
         }
@@ -246,6 +255,11 @@ var computedFn = {
         if (!state.dependenciesCount) {
             computedObservable.dispose();
         }
+<<<<<<< HEAD
+=======
+
+        return changed;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     },
     evaluateImmediate_CallReadWithDependencyDetection: function (notifyChange) {
         // This function is really just part of the evaluateImmediate logic. You would never call it from anywhere else.
@@ -253,7 +267,12 @@ var computedFn = {
         // which contributes to saving about 40% off the CPU overhead of computed evaluation (on V8 at least).
 
         var computedObservable = this,
+<<<<<<< HEAD
             state = computedObservable[computedState];
+=======
+            state = computedObservable[computedState],
+            changed = false;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
         // Initially, we assume that none of the subscriptions are still being used (i.e., all are candidates for disposal).
         // Then, during evaluation, we cross off any that are in fact still being used.
@@ -282,17 +301,31 @@ var computedFn = {
             }
 
             state.latestValue = newValue;
+<<<<<<< HEAD
+=======
+            if (DEBUG) computedObservable._latestValue = newValue;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 
             if (state.isSleeping) {
                 computedObservable.updateVersion();
             } else if (notifyChange) {
                 computedObservable["notifySubscribers"](state.latestValue);
             }
+<<<<<<< HEAD
+=======
+
+            changed = true;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
         }
 
         if (isInitial) {
             computedObservable["notifySubscribers"](state.latestValue, "awake");
         }
+<<<<<<< HEAD
+=======
+
+        return changed;
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
     },
     evaluateImmediate_CallReadThenEndDependencyDetection: function (state, dependencyDetectionContext) {
         // This function is really part of the evaluateImmediate_CallReadWithDependencyDetection logic.
@@ -366,7 +399,13 @@ var pureComputedOverrides = {
                 state.dependencyTracking = null;
                 state.dependenciesCount = 0;
                 state.isStale = true;
+<<<<<<< HEAD
                 computedObservable.evaluateImmediate();
+=======
+                if (computedObservable.evaluateImmediate()) {
+                    computedObservable.updateVersion();
+                }
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
             } else {
                 // First put the dependencies in order
                 var dependeciesOrder = [];

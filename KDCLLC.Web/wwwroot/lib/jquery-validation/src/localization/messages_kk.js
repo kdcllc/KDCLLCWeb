@@ -2,7 +2,11 @@
  * Translated default messages for the jQuery validation plugin.
  * Locale: KK (Kazakh; қазақ тілі)
  */
+<<<<<<< HEAD
 $.extend($.validator.messages, {
+=======
+$.extend( $.validator.messages, {
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
 	required: "Бұл өрісті міндетті түрде толтырыңыз.",
 	remote: "Дұрыс мағына енгізуіңізді сұраймыз.",
 	email: "Нақты электронды поштаңызды енгізуіңізді сұраймыз.",
@@ -14,6 +18,7 @@ $.extend($.validator.messages, {
 	creditcard: "Несие картасының нөмірін дұрыс енгізуіңізді сұраймыз.",
 	equalTo: "Осы мәнді қайта енгізуіңізді сұраймыз.",
 	extension: "Файлдың кеңейтуін дұрыс таңдаңыз.",
+<<<<<<< HEAD
 	maxlength: $.validator.format("Ұзындығы {0} символдан көр болмасын."),
 	minlength: $.validator.format("Ұзындығы {0} символдан аз болмасын."),
 	rangelength: $.validator.format("Ұзындығы {0}-{1} дейін мән енгізуіңізді сұраймыз."),
@@ -21,3 +26,12 @@ $.extend($.validator.messages, {
 	max: $.validator.format("{0} аз немесе тең санын енгізуіңіді сұраймыз."),
 	min: $.validator.format("{0} көп немесе тең санын енгізуіңізді сұраймыз.")
 });
+=======
+	maxlength: $.validator.format( "Ұзындығы {0} символдан көр болмасын." ),
+	minlength: $.validator.format( "Ұзындығы {0} символдан аз болмасын." ),
+	rangelength: $.validator.format( "Ұзындығы {0}-{1} дейін мән енгізуіңізді сұраймыз." ),
+	range: $.validator.format( "Пожалуйста, введите число от {0} до {1}. - {0} - {1} санын енгізуіңізді сұраймыз." ),
+	max: $.validator.format( "{0} аз немесе тең санын енгізуіңіді сұраймыз." ),
+	min: $.validator.format( "{0} көп немесе тең санын енгізуіңізді сұраймыз." )
+} );
+>>>>>>> 7aa03263c89fb4913011931523097243dca57e8f
