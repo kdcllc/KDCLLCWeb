@@ -11,10 +11,11 @@
         "sourceMap": true,
         "noResolve": false
     },
-    "exclude": [
-        "node_modules",
-        "typings/browser.d.ts",
-        "typings/browser"
-    ],
+  "exclude": [
+    "node_modules",
+    "typings/browser.d.ts",
+    "typings/browser",
+    "typings/modules"
+  ],
     "compileOnSave": false
 }

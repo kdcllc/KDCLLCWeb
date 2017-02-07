@@ -292,12 +292,6 @@
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <TypeScriptCompile Include="Tools\config.ts" />
-    <Content Include="Tools\tasks\build.docs.js" />
-    <Content Include="Tools\tasks\check.versions.js" />
-    <Content Include="Tools\tasks\install.packages.js" />
-    <Content Include="Tools\utils\application.js" />
-    <Content Include="Tools\utils\tasks.js" />
-    <Content Include="Tools\utils\yargs.js" />
     <Content Include="wwwroot\css\chameleonforms-twitterbootstrap.css" />
     <Content Include="Global.asax" />
     <Content Include="wwwroot\css\Site.css" />
@@ -469,12 +463,6 @@
     <Content Include="Views\Shared\Sales\_EditSalesOrder.cshtml" />
     <Content Include="typings.json" />
     <Content Include="tsconfig.json" />
-    <Content Include="Tools\tasks\build.docs.js.map" />
-    <Content Include="Tools\tasks\check.versions.js.map" />
-    <Content Include="Tools\tasks\install.packages.js.map" />
-    <Content Include="Tools\utils\application.js.map" />
-    <Content Include="Tools\utils\tasks.js.map" />
-    <Content Include="Tools\utils\yargs.js.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
